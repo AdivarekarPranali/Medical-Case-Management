@@ -71,7 +71,6 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         genderLabel.setText("Gender");
 
         genderGroup.add(maleButton);
-        maleButton.setSelected(true);
         maleButton.setText("Male");
         maleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +79,7 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         });
 
         genderGroup.add(femaleButton);
+        femaleButton.setSelected(true);
         femaleButton.setText("Female");
 
         genderGroup.add(otherButton);
