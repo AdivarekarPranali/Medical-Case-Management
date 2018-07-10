@@ -74,6 +74,13 @@ public class MainWindow extends javax.swing.JFrame {
         System.out.println("called");
     }//GEN-LAST:event_newPatientButtonActionPerformed
 
+    
+        private void oldPatientButton(java.awt.event.ActionEvent evt) {                                                 
+        // TODO add your handling code here:
+        System.out.println("calling");
+        Visits visits = new Visits();
+        System.out.println("called");
+    } 
     /**
      * @param args the command line arguments
      */
