@@ -711,8 +711,8 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="rsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cvsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="cnsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="paLabel" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
                                               <Component id="invgLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -725,13 +725,13 @@
                                       <Component id="othersInput" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="respiratoryRateInput" alignment="0" pref="82" max="32767" attributes="0"/>
-                                          <Component id="temperatureInput" alignment="0" max="32767" attributes="0"/>
                                           <Component id="pulseInput" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="temperatureInput" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                           <Component id="rsInput" alignment="0" max="32767" attributes="0"/>
                                           <Component id="cvsInput" alignment="0" pref="82" max="32767" attributes="0"/>
-                                          <Component id="jTextField1" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="cnsInput" alignment="1" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="paInput" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
@@ -753,11 +753,11 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="temperatureLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="pulseInput" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="temperatureInput" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="temperatureInput" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="pulseInput" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="pulseLabel" alignment="0" min="-2" pref="17" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -774,17 +774,17 @@
                           <Component id="vitalTitleLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cvsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="cvsInput" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="rsInput" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cnsInput" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="cnsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
@@ -818,9 +818,9 @@
                     <Property name="text" type="java.lang.String" value="Temperature"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="temperatureInput">
+                <Component class="javax.swing.JTextField" name="pulseInput">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="temperatureInputActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pulseInputActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="pulseLabel">
@@ -828,9 +828,9 @@
                     <Property name="text" type="java.lang.String" value="Pulse"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="pulseInput">
+                <Component class="javax.swing.JTextField" name="temperatureInput">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pulseInputActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="temperatureInputActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="respiratoryRateInput">
@@ -847,9 +847,10 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea1">
+                    <Component class="javax.swing.JTextArea" name="otherInput">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
+                        <Property name="lineWrap" type="boolean" value="true"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
                     </Component>
@@ -865,7 +866,7 @@
                     <Property name="text" type="java.lang.String" value="Systemic with vital data - "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel1">
+                <Component class="javax.swing.JLabel" name="cvsLabel">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="CVS"/>
                   </Properties>
@@ -875,7 +876,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cvsInputActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel2">
+                <Component class="javax.swing.JLabel" name="rsLabel">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="RS"/>
                   </Properties>
@@ -887,7 +888,7 @@
                     <Property name="text" type="java.lang.String" value="CNS"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField1">
+                <Component class="javax.swing.JTextField" name="cnsInput">
                 </Component>
                 <Component class="javax.swing.JLabel" name="paLabel">
                   <Properties>
@@ -901,9 +902,10 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea2">
+                    <Component class="javax.swing.JTextArea" name="pAInput">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
+                        <Property name="lineWrap" type="boolean" value="true"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
                     </Component>
@@ -955,13 +957,13 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Component id="susceptibilityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="finaDiagnosisLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="finalDiagnosisLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="probableRemediesLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="finalDiagnosisInput" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jScrollPane" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="susceptibulityInput" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jScrollPane3" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -979,8 +981,8 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="finalDiagnosisInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="finaDiagnosisLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jScrollPane" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="finalDiagnosisLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1005,29 +1007,31 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea5">
+                    <Component class="javax.swing.JTextArea" name="susceptibilityInput">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
+                        <Property name="lineWrap" type="boolean" value="true"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JLabel" name="finaDiagnosisLabel">
+                <Component class="javax.swing.JLabel" name="finalDiagnosisLabel">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Final Diagnosis"/>
                   </Properties>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="finalDiagnosisInput">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea6">
+                    <Component class="javax.swing.JTextArea" name="finalDiagnosisInput">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
+                        <Property name="lineWrap" type="boolean" value="true"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
                     </Component>
@@ -1048,6 +1052,7 @@
                     <Component class="javax.swing.JTextArea" name="probableRemediesInput">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
+                        <Property name="lineWrap" type="boolean" value="true"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
                     </Component>
