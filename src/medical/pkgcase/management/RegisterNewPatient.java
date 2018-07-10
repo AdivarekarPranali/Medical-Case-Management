@@ -117,12 +117,14 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         addressLabel.setText("Address");
 
         addressInput.setColumns(20);
+        addressInput.setLineWrap(true);
         addressInput.setRows(5);
         jScrollPane1.setViewportView(addressInput);
 
         pastMedicalLabel.setText("Past Medical");
 
         pastMedicalInput.setColumns(20);
+        pastMedicalInput.setLineWrap(true);
         pastMedicalInput.setRows(5);
         jScrollPane2.setViewportView(pastMedicalInput);
 

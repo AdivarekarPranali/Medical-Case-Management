@@ -32,61 +32,62 @@ public class Visits extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jScrollPane31 = new javax.swing.JScrollPane();
         jPanel13 = new javax.swing.JPanel();
-        visitDateLabel1 = new javax.swing.JLabel();
-        visitDatePicker1 = new org.jdesktop.swingx.JXDatePicker();
-        jLabel18 = new javax.swing.JLabel();
+        visitDateLabel = new javax.swing.JLabel();
+        visitDatePicker = new org.jdesktop.swingx.JXDatePicker();
+        chiefComplaintLabel = new javax.swing.JLabel();
         jScrollPane32 = new javax.swing.JScrollPane();
-        chiefComplaintInput1 = new javax.swing.JTextArea();
-        originLabel1 = new javax.swing.JLabel();
+        chiefComplaintInput = new javax.swing.JTextArea();
+        originLabel = new javax.swing.JLabel();
         jScrollPane33 = new javax.swing.JScrollPane();
-        originInput1 = new javax.swing.JTextArea();
-        durationLabel3 = new javax.swing.JLabel();
+        originInput = new javax.swing.JTextArea();
+        durationLabel = new javax.swing.JLabel();
         jScrollPane34 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        progressLabel3 = new javax.swing.JLabel();
+        durationInput = new javax.swing.JTextArea();
+        progressLabel = new javax.swing.JLabel();
         jScrollPane35 = new javax.swing.JScrollPane();
-        progressInput1 = new javax.swing.JTextArea();
-        habitLabel1 = new javax.swing.JLabel();
+        progressInput = new javax.swing.JTextArea();
+        habitLabel = new javax.swing.JLabel();
         jScrollPane36 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
+        habitInput = new javax.swing.JTextArea();
         jScrollPane18 = new javax.swing.JScrollPane();
         jPanel12 = new javax.swing.JPanel();
-        appetiteLabel1 = new javax.swing.JLabel();
-        thirstLabel1 = new javax.swing.JLabel();
+        appetiteLabel = new javax.swing.JLabel();
+        thirstLabel = new javax.swing.JLabel();
         jScrollPane19 = new javax.swing.JScrollPane();
-        thirstInput1 = new javax.swing.JTextArea();
-        desireLabel1 = new javax.swing.JLabel();
+        thirstInput = new javax.swing.JTextArea();
+        desireLabel = new javax.swing.JLabel();
         jScrollPane20 = new javax.swing.JScrollPane();
-        desireInput1 = new javax.swing.JTextArea();
-        durationLabel2 = new javax.swing.JLabel();
+        desireInput = new javax.swing.JTextArea();
+        aversionLabel = new javax.swing.JLabel();
         jScrollPane21 = new javax.swing.JScrollPane();
-        aversionInput1 = new javax.swing.JTextArea();
-        progressLabel2 = new javax.swing.JLabel();
+        aversionInput = new javax.swing.JTextArea();
+        stoolLabel = new javax.swing.JLabel();
         jScrollPane22 = new javax.swing.JScrollPane();
-        stoolInput1 = new javax.swing.JTextArea();
+        stoolInput = new javax.swing.JTextArea();
         jScrollPane23 = new javax.swing.JScrollPane();
-        urineInput1 = new javax.swing.JTextArea();
+        urineInput = new javax.swing.JTextArea();
         jScrollPane24 = new javax.swing.JScrollPane();
-        appetiteInput1 = new javax.swing.JTextArea();
-        urineLabel1 = new javax.swing.JLabel();
-        perspirationLabel1 = new javax.swing.JLabel();
-        sleepLabel1 = new javax.swing.JLabel();
-        dreamsLabel1 = new javax.swing.JLabel();
-        thermallyLabel1 = new javax.swing.JLabel();
+        appetiteInput = new javax.swing.JTextArea();
+        urineLabel = new javax.swing.JLabel();
+        perspirationLabel = new javax.swing.JLabel();
+        sleepLabel = new javax.swing.JLabel();
+        dreamsLabel = new javax.swing.JLabel();
+        thermallyLabel = new javax.swing.JLabel();
         gynacHistoryLabel1 = new javax.swing.JLabel();
         mindLabel1 = new javax.swing.JLabel();
         jScrollPane25 = new javax.swing.JScrollPane();
-        perspirationInput1 = new javax.swing.JTextArea();
+        perspirationInput = new javax.swing.JTextArea();
         jScrollPane26 = new javax.swing.JScrollPane();
-        sleepInput1 = new javax.swing.JTextArea();
+        sleepInput = new javax.swing.JTextArea();
         jScrollPane27 = new javax.swing.JScrollPane();
-        dreamsInput1 = new javax.swing.JTextArea();
+        dreamsInput = new javax.swing.JTextArea();
         jScrollPane28 = new javax.swing.JScrollPane();
         thermallyInput1 = new javax.swing.JTextArea();
         jScrollPane29 = new javax.swing.JScrollPane();
-        gynacHistoryInput1 = new javax.swing.JTextArea();
+        gynacHistoryInput = new javax.swing.JTextArea();
         jScrollPane30 = new javax.swing.JScrollPane();
-        mindInput1 = new javax.swing.JTextArea();
+        mindInput = new javax.swing.JTextArea();
+        saveButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -96,37 +97,42 @@ public class Visits extends javax.swing.JFrame {
 
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Visits"));
 
-        visitDateLabel1.setText("Visit Date");
+        visitDateLabel.setText("Visit Date");
 
-        jLabel18.setText("Chief Complaint");
+        chiefComplaintLabel.setText("Chief Complaint");
 
-        chiefComplaintInput1.setColumns(20);
-        chiefComplaintInput1.setRows(5);
-        jScrollPane32.setViewportView(chiefComplaintInput1);
+        chiefComplaintInput.setColumns(20);
+        chiefComplaintInput.setLineWrap(true);
+        chiefComplaintInput.setRows(5);
+        jScrollPane32.setViewportView(chiefComplaintInput);
 
-        originLabel1.setText("Origin");
+        originLabel.setText("Origin");
 
-        originInput1.setColumns(20);
-        originInput1.setRows(5);
-        jScrollPane33.setViewportView(originInput1);
+        originInput.setColumns(20);
+        originInput.setLineWrap(true);
+        originInput.setRows(5);
+        jScrollPane33.setViewportView(originInput);
 
-        durationLabel3.setText("Duration");
+        durationLabel.setText("Duration");
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane34.setViewportView(jTextArea3);
+        durationInput.setColumns(20);
+        durationInput.setLineWrap(true);
+        durationInput.setRows(5);
+        jScrollPane34.setViewportView(durationInput);
 
-        progressLabel3.setText("Progress");
+        progressLabel.setText("Progress");
 
-        progressInput1.setColumns(20);
-        progressInput1.setRows(5);
-        jScrollPane35.setViewportView(progressInput1);
+        progressInput.setColumns(20);
+        progressInput.setLineWrap(true);
+        progressInput.setRows(5);
+        jScrollPane35.setViewportView(progressInput);
 
-        habitLabel1.setText("Habit/Addiction");
+        habitLabel.setText("Habit/Addiction");
 
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jScrollPane36.setViewportView(jTextArea4);
+        habitInput.setColumns(20);
+        habitInput.setLineWrap(true);
+        habitInput.setRows(5);
+        jScrollPane36.setViewportView(habitInput);
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -137,21 +143,21 @@ public class Visits extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addComponent(visitDateLabel1)
+                        .addComponent(visitDateLabel)
                         .addGap(44, 44, 44)
-                        .addComponent(visitDatePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(visitDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(originLabel1)
+                                .addComponent(originLabel)
                                 .addGroup(jPanel13Layout.createSequentialGroup()
                                     .addGap(1, 1, 1)
                                     .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(habitLabel1, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(progressLabel3, javax.swing.GroupLayout.Alignment.LEADING)))
-                                .addComponent(durationLabel3))
-                            .addComponent(jLabel18))
+                                        .addComponent(habitLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(progressLabel, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addComponent(durationLabel))
+                            .addComponent(chiefComplaintLabel))
                         .addGap(14, 14, 14)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane32, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
@@ -165,32 +171,32 @@ public class Visits extends javax.swing.JFrame {
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(visitDatePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(visitDateLabel1))
+                    .addComponent(visitDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(visitDateLabel))
                 .addGap(33, 33, 33)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel18)))
+                        .addComponent(chiefComplaintLabel)))
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(originLabel1))
+                        .addComponent(originLabel))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(durationLabel3))
+                    .addComponent(durationLabel))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(progressLabel3)
+                    .addComponent(progressLabel)
                     .addComponent(jScrollPane35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(habitLabel1)
+                    .addComponent(habitLabel)
                     .addComponent(jScrollPane36, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -200,77 +206,89 @@ public class Visits extends javax.swing.JFrame {
 
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Physical Generals"));
 
-        appetiteLabel1.setText("Appetite");
+        appetiteLabel.setText("Appetite");
 
-        thirstLabel1.setText("Thirst");
+        thirstLabel.setText("Thirst");
 
-        thirstInput1.setColumns(20);
-        thirstInput1.setRows(5);
-        jScrollPane19.setViewportView(thirstInput1);
+        thirstInput.setColumns(20);
+        thirstInput.setLineWrap(true);
+        thirstInput.setRows(5);
+        jScrollPane19.setViewportView(thirstInput);
 
-        desireLabel1.setText("Desire");
+        desireLabel.setText("Desire");
 
-        desireInput1.setColumns(20);
-        desireInput1.setRows(5);
-        jScrollPane20.setViewportView(desireInput1);
+        desireInput.setColumns(20);
+        desireInput.setLineWrap(true);
+        desireInput.setRows(5);
+        jScrollPane20.setViewportView(desireInput);
 
-        durationLabel2.setText("Aversion");
+        aversionLabel.setText("Aversion");
 
-        aversionInput1.setColumns(20);
-        aversionInput1.setRows(5);
-        jScrollPane21.setViewportView(aversionInput1);
+        aversionInput.setColumns(20);
+        aversionInput.setLineWrap(true);
+        aversionInput.setRows(5);
+        jScrollPane21.setViewportView(aversionInput);
 
-        progressLabel2.setText("Stool");
+        stoolLabel.setText("Stool");
 
-        stoolInput1.setColumns(20);
-        stoolInput1.setRows(5);
-        jScrollPane22.setViewportView(stoolInput1);
+        stoolInput.setColumns(20);
+        stoolInput.setLineWrap(true);
+        stoolInput.setRows(5);
+        jScrollPane22.setViewportView(stoolInput);
 
-        urineInput1.setColumns(20);
-        urineInput1.setRows(5);
-        jScrollPane23.setViewportView(urineInput1);
+        urineInput.setColumns(20);
+        urineInput.setLineWrap(true);
+        urineInput.setRows(5);
+        jScrollPane23.setViewportView(urineInput);
 
-        appetiteInput1.setColumns(20);
-        appetiteInput1.setRows(5);
-        jScrollPane24.setViewportView(appetiteInput1);
+        appetiteInput.setColumns(20);
+        appetiteInput.setLineWrap(true);
+        appetiteInput.setRows(5);
+        jScrollPane24.setViewportView(appetiteInput);
 
-        urineLabel1.setText("Urine");
+        urineLabel.setText("Urine");
 
-        perspirationLabel1.setText("Perspiration");
+        perspirationLabel.setText("Perspiration");
 
-        sleepLabel1.setText("Sleep");
+        sleepLabel.setText("Sleep");
 
-        dreamsLabel1.setText("Dreams");
+        dreamsLabel.setText("Dreams");
 
-        thermallyLabel1.setText("Thermally");
+        thermallyLabel.setText("Thermally");
 
         gynacHistoryLabel1.setText("Gynac History");
 
         mindLabel1.setText("Mind");
 
-        perspirationInput1.setColumns(20);
-        perspirationInput1.setRows(5);
-        jScrollPane25.setViewportView(perspirationInput1);
+        perspirationInput.setColumns(20);
+        perspirationInput.setLineWrap(true);
+        perspirationInput.setRows(5);
+        jScrollPane25.setViewportView(perspirationInput);
 
-        sleepInput1.setColumns(20);
-        sleepInput1.setRows(5);
-        jScrollPane26.setViewportView(sleepInput1);
+        sleepInput.setColumns(20);
+        sleepInput.setLineWrap(true);
+        sleepInput.setRows(5);
+        jScrollPane26.setViewportView(sleepInput);
 
-        dreamsInput1.setColumns(20);
-        dreamsInput1.setRows(5);
-        jScrollPane27.setViewportView(dreamsInput1);
+        dreamsInput.setColumns(20);
+        dreamsInput.setLineWrap(true);
+        dreamsInput.setRows(5);
+        jScrollPane27.setViewportView(dreamsInput);
 
         thermallyInput1.setColumns(20);
+        thermallyInput1.setLineWrap(true);
         thermallyInput1.setRows(5);
         jScrollPane28.setViewportView(thermallyInput1);
 
-        gynacHistoryInput1.setColumns(20);
-        gynacHistoryInput1.setRows(5);
-        jScrollPane29.setViewportView(gynacHistoryInput1);
+        gynacHistoryInput.setColumns(20);
+        gynacHistoryInput.setLineWrap(true);
+        gynacHistoryInput.setRows(5);
+        jScrollPane29.setViewportView(gynacHistoryInput);
 
-        mindInput1.setColumns(20);
-        mindInput1.setRows(5);
-        jScrollPane30.setViewportView(mindInput1);
+        mindInput.setColumns(20);
+        mindInput.setLineWrap(true);
+        mindInput.setRows(5);
+        jScrollPane30.setViewportView(mindInput);
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -279,18 +297,18 @@ public class Visits extends javax.swing.JFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(5, 5, 5)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(appetiteLabel1)
-                    .addComponent(thirstLabel1)
-                    .addComponent(desireLabel1)
-                    .addComponent(durationLabel2)
-                    .addComponent(progressLabel2)
-                    .addComponent(urineLabel1)
+                    .addComponent(appetiteLabel)
+                    .addComponent(thirstLabel)
+                    .addComponent(desireLabel)
+                    .addComponent(aversionLabel)
+                    .addComponent(stoolLabel)
+                    .addComponent(urineLabel)
                     .addComponent(mindLabel1)
                     .addComponent(gynacHistoryLabel1)
-                    .addComponent(thermallyLabel1)
-                    .addComponent(dreamsLabel1)
-                    .addComponent(sleepLabel1)
-                    .addComponent(perspirationLabel1))
+                    .addComponent(thermallyLabel)
+                    .addComponent(dreamsLabel)
+                    .addComponent(sleepLabel)
+                    .addComponent(perspirationLabel))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
@@ -326,26 +344,26 @@ public class Visits extends javax.swing.JFrame {
                         .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                        .addComponent(appetiteLabel1)
+                        .addComponent(appetiteLabel)
                         .addGap(37, 37, 37)
-                        .addComponent(thirstLabel1)
+                        .addComponent(thirstLabel)
                         .addGap(36, 36, 36)
-                        .addComponent(desireLabel1)
+                        .addComponent(desireLabel)
                         .addGap(37, 37, 37)
-                        .addComponent(durationLabel2)
+                        .addComponent(aversionLabel)
                         .addGap(38, 38, 38)
-                        .addComponent(progressLabel2)
+                        .addComponent(stoolLabel)
                         .addGap(37, 37, 37)
-                        .addComponent(urineLabel1)
+                        .addComponent(urineLabel)
                         .addGap(30, 30, 30)))
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(perspirationLabel1)
+                        .addComponent(perspirationLabel)
                         .addGap(37, 37, 37)
-                        .addComponent(sleepLabel1)
+                        .addComponent(sleepLabel)
                         .addGap(37, 37, 37)
-                        .addComponent(dreamsLabel1))
+                        .addComponent(dreamsLabel))
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addComponent(jScrollPane25, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -356,7 +374,7 @@ public class Visits extends javax.swing.JFrame {
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGap(11, 11, 11)
-                        .addComponent(thermallyLabel1)
+                        .addComponent(thermallyLabel)
                         .addGap(38, 38, 38)
                         .addComponent(gynacHistoryLabel1)
                         .addGap(38, 38, 38)
@@ -375,17 +393,27 @@ public class Visits extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Physical Details", jScrollPane18);
 
+        saveButton.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
+        saveButton.setText("Save");
+        saveButton.setActionCommand("Save");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(230, 230, 230))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 44, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(saveButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -427,20 +455,22 @@ public class Visits extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea appetiteInput1;
-    private javax.swing.JLabel appetiteLabel1;
-    private javax.swing.JTextArea aversionInput1;
-    private javax.swing.JTextArea chiefComplaintInput1;
-    private javax.swing.JTextArea desireInput1;
-    private javax.swing.JLabel desireLabel1;
-    private javax.swing.JTextArea dreamsInput1;
-    private javax.swing.JLabel dreamsLabel1;
-    private javax.swing.JLabel durationLabel2;
-    private javax.swing.JLabel durationLabel3;
-    private javax.swing.JTextArea gynacHistoryInput1;
+    private javax.swing.JTextArea appetiteInput;
+    private javax.swing.JLabel appetiteLabel;
+    private javax.swing.JTextArea aversionInput;
+    private javax.swing.JLabel aversionLabel;
+    private javax.swing.JTextArea chiefComplaintInput;
+    private javax.swing.JLabel chiefComplaintLabel;
+    private javax.swing.JTextArea desireInput;
+    private javax.swing.JLabel desireLabel;
+    private javax.swing.JTextArea dreamsInput;
+    private javax.swing.JLabel dreamsLabel;
+    private javax.swing.JTextArea durationInput;
+    private javax.swing.JLabel durationLabel;
+    private javax.swing.JTextArea gynacHistoryInput;
     private javax.swing.JLabel gynacHistoryLabel1;
-    private javax.swing.JLabel habitLabel1;
-    private javax.swing.JLabel jLabel18;
+    private javax.swing.JTextArea habitInput;
+    private javax.swing.JLabel habitLabel;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JScrollPane jScrollPane18;
@@ -463,27 +493,26 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane35;
     private javax.swing.JScrollPane jScrollPane36;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea mindInput1;
+    private javax.swing.JTextArea mindInput;
     private javax.swing.JLabel mindLabel1;
-    private javax.swing.JTextArea originInput1;
-    private javax.swing.JLabel originLabel1;
-    private javax.swing.JTextArea perspirationInput1;
-    private javax.swing.JLabel perspirationLabel1;
-    private javax.swing.JTextArea progressInput1;
-    private javax.swing.JLabel progressLabel2;
-    private javax.swing.JLabel progressLabel3;
-    private javax.swing.JTextArea sleepInput1;
-    private javax.swing.JLabel sleepLabel1;
-    private javax.swing.JTextArea stoolInput1;
+    private javax.swing.JTextArea originInput;
+    private javax.swing.JLabel originLabel;
+    private javax.swing.JTextArea perspirationInput;
+    private javax.swing.JLabel perspirationLabel;
+    private javax.swing.JTextArea progressInput;
+    private javax.swing.JLabel progressLabel;
+    private javax.swing.JButton saveButton;
+    private javax.swing.JTextArea sleepInput;
+    private javax.swing.JLabel sleepLabel;
+    private javax.swing.JTextArea stoolInput;
+    private javax.swing.JLabel stoolLabel;
     private javax.swing.JTextArea thermallyInput1;
-    private javax.swing.JLabel thermallyLabel1;
-    private javax.swing.JTextArea thirstInput1;
-    private javax.swing.JLabel thirstLabel1;
-    private javax.swing.JTextArea urineInput1;
-    private javax.swing.JLabel urineLabel1;
-    private javax.swing.JLabel visitDateLabel1;
-    private org.jdesktop.swingx.JXDatePicker visitDatePicker1;
+    private javax.swing.JLabel thermallyLabel;
+    private javax.swing.JTextArea thirstInput;
+    private javax.swing.JLabel thirstLabel;
+    private javax.swing.JTextArea urineInput;
+    private javax.swing.JLabel urineLabel;
+    private javax.swing.JLabel visitDateLabel;
+    private org.jdesktop.swingx.JXDatePicker visitDatePicker;
     // End of variables declaration//GEN-END:variables
 }
