@@ -31,6 +31,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         newPatientButton = new javax.swing.JButton();
         oldPatientButton = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,26 +43,54 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         oldPatientButton.setText("Old Patient");
+        oldPatientButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                oldPatientButtonActionPerformed(evt);
+            }
+        });
+
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("Main Window"));
+        jPanel10.setName(""); // NOI18N
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 129, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(94, 94, 94)
-                .addComponent(newPatientButton)
-                .addGap(72, 72, 72)
-                .addComponent(oldPatientButton)
-                .addContainerGap(82, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(89, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(oldPatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(newPatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(72, 72, 72))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel10, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(newPatientButton)
-                    .addComponent(oldPatientButton))
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addGap(61, 61, 61)
+                .addComponent(newPatientButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(oldPatientButton)
+                .addContainerGap(28, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pack();
@@ -74,13 +103,14 @@ public class MainWindow extends javax.swing.JFrame {
         System.out.println("called");
     }//GEN-LAST:event_newPatientButtonActionPerformed
 
-    
-        private void oldPatientButton(java.awt.event.ActionEvent evt) {                                                 
+    private void oldPatientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oldPatientButtonActionPerformed
         // TODO add your handling code here:
-        System.out.println("calling");
-        Visits visits = new Visits();
-        System.out.println("called");
-    } 
+                System.out.println("calling");
+        //Visits v = new Visits();
+        Search search = new Search();
+        //RegisterNewPatient rp = new RegisterNewPatient();
+    }//GEN-LAST:event_oldPatientButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -117,6 +147,7 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JButton newPatientButton;
     private javax.swing.JButton oldPatientButton;
     // End of variables declaration//GEN-END:variables

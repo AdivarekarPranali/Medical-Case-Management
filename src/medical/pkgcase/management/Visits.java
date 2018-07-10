@@ -16,6 +16,8 @@ public class Visits extends javax.swing.JFrame {
      */
     public Visits() {
         initComponents();
+                setVisible(true);
+
     }
 
     /**
@@ -27,142 +29,363 @@ public class Visits extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel10 = new javax.swing.JPanel();
-        visitDateLabel = new javax.swing.JLabel();
-        visitDatePicker = new org.jdesktop.swingx.JXDatePicker();
-        jLabel17 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        chiefComplaintInput = new javax.swing.JTextArea();
-        originLabel = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        originInput = new javax.swing.JTextArea();
-        durationLabel = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        progressLabel = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        progressInput = new javax.swing.JTextArea();
-        habitLabel = new javax.swing.JLabel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jScrollPane31 = new javax.swing.JScrollPane();
+        jPanel13 = new javax.swing.JPanel();
+        visitDateLabel1 = new javax.swing.JLabel();
+        visitDatePicker1 = new org.jdesktop.swingx.JXDatePicker();
+        jLabel18 = new javax.swing.JLabel();
+        jScrollPane32 = new javax.swing.JScrollPane();
+        chiefComplaintInput1 = new javax.swing.JTextArea();
+        originLabel1 = new javax.swing.JLabel();
+        jScrollPane33 = new javax.swing.JScrollPane();
+        originInput1 = new javax.swing.JTextArea();
+        durationLabel3 = new javax.swing.JLabel();
+        jScrollPane34 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        progressLabel3 = new javax.swing.JLabel();
+        jScrollPane35 = new javax.swing.JScrollPane();
+        progressInput1 = new javax.swing.JTextArea();
+        habitLabel1 = new javax.swing.JLabel();
+        jScrollPane36 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jScrollPane18 = new javax.swing.JScrollPane();
+        jPanel12 = new javax.swing.JPanel();
+        appetiteLabel1 = new javax.swing.JLabel();
+        thirstLabel1 = new javax.swing.JLabel();
+        jScrollPane19 = new javax.swing.JScrollPane();
+        thirstInput1 = new javax.swing.JTextArea();
+        desireLabel1 = new javax.swing.JLabel();
+        jScrollPane20 = new javax.swing.JScrollPane();
+        desireInput1 = new javax.swing.JTextArea();
+        durationLabel2 = new javax.swing.JLabel();
+        jScrollPane21 = new javax.swing.JScrollPane();
+        aversionInput1 = new javax.swing.JTextArea();
+        progressLabel2 = new javax.swing.JLabel();
+        jScrollPane22 = new javax.swing.JScrollPane();
+        stoolInput1 = new javax.swing.JTextArea();
+        jScrollPane23 = new javax.swing.JScrollPane();
+        urineInput1 = new javax.swing.JTextArea();
+        jScrollPane24 = new javax.swing.JScrollPane();
+        appetiteInput1 = new javax.swing.JTextArea();
+        urineLabel1 = new javax.swing.JLabel();
+        perspirationLabel1 = new javax.swing.JLabel();
+        sleepLabel1 = new javax.swing.JLabel();
+        dreamsLabel1 = new javax.swing.JLabel();
+        thermallyLabel1 = new javax.swing.JLabel();
+        gynacHistoryLabel1 = new javax.swing.JLabel();
+        mindLabel1 = new javax.swing.JLabel();
+        jScrollPane25 = new javax.swing.JScrollPane();
+        perspirationInput1 = new javax.swing.JTextArea();
+        jScrollPane26 = new javax.swing.JScrollPane();
+        sleepInput1 = new javax.swing.JTextArea();
+        jScrollPane27 = new javax.swing.JScrollPane();
+        dreamsInput1 = new javax.swing.JTextArea();
+        jScrollPane28 = new javax.swing.JScrollPane();
+        thermallyInput1 = new javax.swing.JTextArea();
+        jScrollPane29 = new javax.swing.JScrollPane();
+        gynacHistoryInput1 = new javax.swing.JTextArea();
+        jScrollPane30 = new javax.swing.JScrollPane();
+        mindInput1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("Visits"));
+        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        jTabbedPane1.setMinimumSize(new java.awt.Dimension(208, 43));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(211, 50));
 
-        visitDateLabel.setText("Visit Date");
+        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Visits"));
 
-        jLabel17.setText("Chief Complaint");
+        visitDateLabel1.setText("Visit Date");
 
-        chiefComplaintInput.setColumns(20);
-        chiefComplaintInput.setRows(5);
-        jScrollPane3.setViewportView(chiefComplaintInput);
+        jLabel18.setText("Chief Complaint");
 
-        originLabel.setText("Origin");
+        chiefComplaintInput1.setColumns(20);
+        chiefComplaintInput1.setRows(5);
+        jScrollPane32.setViewportView(chiefComplaintInput1);
 
-        originInput.setColumns(20);
-        originInput.setRows(5);
-        jScrollPane4.setViewportView(originInput);
+        originLabel1.setText("Origin");
 
-        durationLabel.setText("Duration");
+        originInput1.setColumns(20);
+        originInput1.setRows(5);
+        jScrollPane33.setViewportView(originInput1);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane5.setViewportView(jTextArea1);
+        durationLabel3.setText("Duration");
 
-        progressLabel.setText("Progress");
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane34.setViewportView(jTextArea3);
 
-        progressInput.setColumns(20);
-        progressInput.setRows(5);
-        jScrollPane6.setViewportView(progressInput);
+        progressLabel3.setText("Progress");
 
-        habitLabel.setText("Habit/Addiction");
+        progressInput1.setColumns(20);
+        progressInput1.setRows(5);
+        jScrollPane35.setViewportView(progressInput1);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane7.setViewportView(jTextArea2);
+        habitLabel1.setText("Habit/Addiction");
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(visitDateLabel)
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jScrollPane36.setViewportView(jTextArea4);
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(visitDateLabel1)
                         .addGap(44, 44, 44)
-                        .addComponent(visitDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(visitDatePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17)
-                            .addComponent(originLabel)
-                            .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(habitLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(progressLabel, javax.swing.GroupLayout.Alignment.LEADING)))
-                            .addComponent(durationLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(originLabel1)
+                                .addGroup(jPanel13Layout.createSequentialGroup()
+                                    .addGap(1, 1, 1)
+                                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(habitLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(progressLabel3, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addComponent(durationLabel3))
+                            .addComponent(jLabel18))
+                        .addGap(14, 14, 14)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane32, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
+                            .addComponent(jScrollPane33, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
+                            .addComponent(jScrollPane34, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
+                            .addComponent(jScrollPane35, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
+                            .addComponent(jScrollPane36, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE))))
                 .addContainerGap())
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(visitDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(visitDateLabel))
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(visitDatePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(visitDateLabel1))
                 .addGap(33, 33, 33)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel18)))
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(originLabel))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(originLabel1))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(durationLabel))
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(durationLabel3))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(progressLabel)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(progressLabel3)
+                    .addComponent(jScrollPane35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(habitLabel)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(habitLabel1)
+                    .addComponent(jScrollPane36, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
+
+        jScrollPane31.setViewportView(jPanel13);
+
+        jTabbedPane1.addTab("Visit Details", jScrollPane31);
+
+        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Physical Generals"));
+
+        appetiteLabel1.setText("Appetite");
+
+        thirstLabel1.setText("Thirst");
+
+        thirstInput1.setColumns(20);
+        thirstInput1.setRows(5);
+        jScrollPane19.setViewportView(thirstInput1);
+
+        desireLabel1.setText("Desire");
+
+        desireInput1.setColumns(20);
+        desireInput1.setRows(5);
+        jScrollPane20.setViewportView(desireInput1);
+
+        durationLabel2.setText("Aversion");
+
+        aversionInput1.setColumns(20);
+        aversionInput1.setRows(5);
+        jScrollPane21.setViewportView(aversionInput1);
+
+        progressLabel2.setText("Stool");
+
+        stoolInput1.setColumns(20);
+        stoolInput1.setRows(5);
+        jScrollPane22.setViewportView(stoolInput1);
+
+        urineInput1.setColumns(20);
+        urineInput1.setRows(5);
+        jScrollPane23.setViewportView(urineInput1);
+
+        appetiteInput1.setColumns(20);
+        appetiteInput1.setRows(5);
+        jScrollPane24.setViewportView(appetiteInput1);
+
+        urineLabel1.setText("Urine");
+
+        perspirationLabel1.setText("Perspiration");
+
+        sleepLabel1.setText("Sleep");
+
+        dreamsLabel1.setText("Dreams");
+
+        thermallyLabel1.setText("Thermally");
+
+        gynacHistoryLabel1.setText("Gynac History");
+
+        mindLabel1.setText("Mind");
+
+        perspirationInput1.setColumns(20);
+        perspirationInput1.setRows(5);
+        jScrollPane25.setViewportView(perspirationInput1);
+
+        sleepInput1.setColumns(20);
+        sleepInput1.setRows(5);
+        jScrollPane26.setViewportView(sleepInput1);
+
+        dreamsInput1.setColumns(20);
+        dreamsInput1.setRows(5);
+        jScrollPane27.setViewportView(dreamsInput1);
+
+        thermallyInput1.setColumns(20);
+        thermallyInput1.setRows(5);
+        jScrollPane28.setViewportView(thermallyInput1);
+
+        gynacHistoryInput1.setColumns(20);
+        gynacHistoryInput1.setRows(5);
+        jScrollPane29.setViewportView(gynacHistoryInput1);
+
+        mindInput1.setColumns(20);
+        mindInput1.setRows(5);
+        jScrollPane30.setViewportView(mindInput1);
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(appetiteLabel1)
+                    .addComponent(thirstLabel1)
+                    .addComponent(desireLabel1)
+                    .addComponent(durationLabel2)
+                    .addComponent(progressLabel2)
+                    .addComponent(urineLabel1)
+                    .addComponent(mindLabel1)
+                    .addComponent(gynacHistoryLabel1)
+                    .addComponent(thermallyLabel1)
+                    .addComponent(dreamsLabel1)
+                    .addComponent(sleepLabel1)
+                    .addComponent(perspirationLabel1))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+                    .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+                    .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+                    .addComponent(jScrollPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+                    .addComponent(jScrollPane23, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+                    .addComponent(jScrollPane24)
+                    .addComponent(jScrollPane25)
+                    .addComponent(jScrollPane26)
+                    .addComponent(jScrollPane27)
+                    .addComponent(jScrollPane28)
+                    .addComponent(jScrollPane29)
+                    .addComponent(jScrollPane30))
+                .addContainerGap())
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                        .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                        .addComponent(appetiteLabel1)
+                        .addGap(37, 37, 37)
+                        .addComponent(thirstLabel1)
+                        .addGap(36, 36, 36)
+                        .addComponent(desireLabel1)
+                        .addGap(37, 37, 37)
+                        .addComponent(durationLabel2)
+                        .addGap(38, 38, 38)
+                        .addComponent(progressLabel2)
+                        .addGap(37, 37, 37)
+                        .addComponent(urineLabel1)
+                        .addGap(30, 30, 30)))
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(perspirationLabel1)
+                        .addGap(37, 37, 37)
+                        .addComponent(sleepLabel1)
+                        .addGap(37, 37, 37)
+                        .addComponent(dreamsLabel1))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addComponent(jScrollPane25, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane26, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane27, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(4, 4, 4)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(thermallyLabel1)
+                        .addGap(38, 38, 38)
+                        .addComponent(gynacHistoryLabel1)
+                        .addGap(38, 38, 38)
+                        .addComponent(mindLabel1))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jScrollPane28, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane29, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane30, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jScrollPane18.setViewportView(jPanel12);
+
+        jTabbedPane1.addTab("Physical Details", jScrollPane18);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jPanel10, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 610, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 44, Short.MAX_VALUE))
         );
 
         pack();
@@ -204,23 +427,63 @@ public class Visits extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea chiefComplaintInput;
-    private javax.swing.JLabel durationLabel;
-    private javax.swing.JLabel habitLabel;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea originInput;
-    private javax.swing.JLabel originLabel;
-    private javax.swing.JTextArea progressInput;
-    private javax.swing.JLabel progressLabel;
-    private javax.swing.JLabel visitDateLabel;
-    private org.jdesktop.swingx.JXDatePicker visitDatePicker;
+    private javax.swing.JTextArea appetiteInput1;
+    private javax.swing.JLabel appetiteLabel1;
+    private javax.swing.JTextArea aversionInput1;
+    private javax.swing.JTextArea chiefComplaintInput1;
+    private javax.swing.JTextArea desireInput1;
+    private javax.swing.JLabel desireLabel1;
+    private javax.swing.JTextArea dreamsInput1;
+    private javax.swing.JLabel dreamsLabel1;
+    private javax.swing.JLabel durationLabel2;
+    private javax.swing.JLabel durationLabel3;
+    private javax.swing.JTextArea gynacHistoryInput1;
+    private javax.swing.JLabel gynacHistoryLabel1;
+    private javax.swing.JLabel habitLabel1;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JScrollPane jScrollPane18;
+    private javax.swing.JScrollPane jScrollPane19;
+    private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JScrollPane jScrollPane21;
+    private javax.swing.JScrollPane jScrollPane22;
+    private javax.swing.JScrollPane jScrollPane23;
+    private javax.swing.JScrollPane jScrollPane24;
+    private javax.swing.JScrollPane jScrollPane25;
+    private javax.swing.JScrollPane jScrollPane26;
+    private javax.swing.JScrollPane jScrollPane27;
+    private javax.swing.JScrollPane jScrollPane28;
+    private javax.swing.JScrollPane jScrollPane29;
+    private javax.swing.JScrollPane jScrollPane30;
+    private javax.swing.JScrollPane jScrollPane31;
+    private javax.swing.JScrollPane jScrollPane32;
+    private javax.swing.JScrollPane jScrollPane33;
+    private javax.swing.JScrollPane jScrollPane34;
+    private javax.swing.JScrollPane jScrollPane35;
+    private javax.swing.JScrollPane jScrollPane36;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea mindInput1;
+    private javax.swing.JLabel mindLabel1;
+    private javax.swing.JTextArea originInput1;
+    private javax.swing.JLabel originLabel1;
+    private javax.swing.JTextArea perspirationInput1;
+    private javax.swing.JLabel perspirationLabel1;
+    private javax.swing.JTextArea progressInput1;
+    private javax.swing.JLabel progressLabel2;
+    private javax.swing.JLabel progressLabel3;
+    private javax.swing.JTextArea sleepInput1;
+    private javax.swing.JLabel sleepLabel1;
+    private javax.swing.JTextArea stoolInput1;
+    private javax.swing.JTextArea thermallyInput1;
+    private javax.swing.JLabel thermallyLabel1;
+    private javax.swing.JTextArea thirstInput1;
+    private javax.swing.JLabel thirstLabel1;
+    private javax.swing.JTextArea urineInput1;
+    private javax.swing.JLabel urineLabel1;
+    private javax.swing.JLabel visitDateLabel1;
+    private org.jdesktop.swingx.JXDatePicker visitDatePicker1;
     // End of variables declaration//GEN-END:variables
 }

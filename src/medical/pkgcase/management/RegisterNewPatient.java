@@ -30,6 +30,7 @@ public class RegisterNewPatient extends javax.swing.JFrame {
 
         genderGroup = new javax.swing.ButtonGroup();
         maritalStatusGroup = new javax.swing.ButtonGroup();
+        jButton1 = new javax.swing.JButton();
         personalPanel = new javax.swing.JPanel();
         firstNameLabel = new javax.swing.JLabel();
         lastNameLabel = new javax.swing.JLabel();
@@ -39,13 +40,13 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         maleButton = new javax.swing.JRadioButton();
         femaleButton = new javax.swing.JRadioButton();
         otherButton = new javax.swing.JRadioButton();
+        singleButton = new javax.swing.JRadioButton();
         phoneLabel = new javax.swing.JLabel();
         phoneInput = new javax.swing.JTextField();
         dobLabel = new javax.swing.JLabel();
         dobPicker = new org.jdesktop.swingx.JXDatePicker();
         maritalLabel = new javax.swing.JLabel();
         marriedButton = new javax.swing.JRadioButton();
-        singleButton = new javax.swing.JRadioButton();
         occupationLabel = new javax.swing.JLabel();
         occupationInput = new javax.swing.JTextField();
         bloodGroupLabel = new javax.swing.JLabel();
@@ -58,7 +59,9 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         pastMedicalLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         pastMedicalInput = new javax.swing.JTextArea();
-        registerPatientButton = new javax.swing.JButton();
+        registerButton = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,6 +88,10 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         genderGroup.add(otherButton);
         otherButton.setText("Other");
 
+        maritalStatusGroup.add(singleButton);
+        singleButton.setSelected(true);
+        singleButton.setText("Single");
+
         phoneLabel.setText("Phone");
 
         dobLabel.setText("DOB");
@@ -93,10 +100,6 @@ public class RegisterNewPatient extends javax.swing.JFrame {
 
         maritalStatusGroup.add(marriedButton);
         marriedButton.setText("Married");
-
-        maritalStatusGroup.add(singleButton);
-        singleButton.setSelected(true);
-        singleButton.setText("Single");
 
         occupationLabel.setText("Occupation");
 
@@ -122,6 +125,13 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         pastMedicalInput.setColumns(20);
         pastMedicalInput.setRows(5);
         jScrollPane2.setViewportView(pastMedicalInput);
+
+        registerButton.setText("Register");
+        registerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout personalPanelLayout = new javax.swing.GroupLayout(personalPanel);
         personalPanel.setLayout(personalPanelLayout);
@@ -149,6 +159,7 @@ public class RegisterNewPatient extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lastNameInput))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2)
                     .addGroup(personalPanelLayout.createSequentialGroup()
                         .addGroup(personalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(bloodGroupComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -166,9 +177,11 @@ public class RegisterNewPatient extends javax.swing.JFrame {
                             .addGroup(personalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(emailInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                                 .addComponent(occupationInput, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(phoneInput, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane2))
+                                .addComponent(phoneInput, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGroup(personalPanelLayout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(registerButton)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         personalPanelLayout.setVerticalGroup(
@@ -218,41 +231,26 @@ public class RegisterNewPatient extends javax.swing.JFrame {
                 .addGroup(personalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pastMedicalLabel))
-                .addGap(0, 40, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(registerButton)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
-
-        registerPatientButton.setText("Register");
-        registerPatientButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registerPatientButtonActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(175, Short.MAX_VALUE)
-                .addComponent(registerPatientButton)
-                .addGap(167, 167, 167))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(personalPanel, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(personalPanel, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(598, Short.MAX_VALUE)
-                .addComponent(registerPatientButton)
-                .addGap(21, 21, 21))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(personalPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(personalPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -266,10 +264,11 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bloodGroupComboBoxActionPerformed
 
-    private void registerPatientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerPatientButtonActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_registerPatientButtonActionPerformed
+    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
+
+        Visits visit = new Visits();
+
+    }//GEN-LAST:event_registerButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -320,6 +319,7 @@ public class RegisterNewPatient extends javax.swing.JFrame {
     private javax.swing.JLabel firstNameLabel;
     private javax.swing.ButtonGroup genderGroup;
     private javax.swing.JLabel genderLabel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField lastNameInput;
@@ -336,7 +336,7 @@ public class RegisterNewPatient extends javax.swing.JFrame {
     private javax.swing.JPanel personalPanel;
     private javax.swing.JTextField phoneInput;
     private javax.swing.JLabel phoneLabel;
-    private javax.swing.JButton registerPatientButton;
+    private javax.swing.JButton registerButton;
     private javax.swing.JRadioButton singleButton;
     // End of variables declaration//GEN-END:variables
 }
