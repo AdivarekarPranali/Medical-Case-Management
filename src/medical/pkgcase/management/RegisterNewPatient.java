@@ -92,10 +92,10 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         maritalLabel.setText("Marital Status");
 
         maritalStatusGroup.add(marriedButton);
-        marriedButton.setSelected(true);
         marriedButton.setText("Married");
 
         maritalStatusGroup.add(singleButton);
+        singleButton.setSelected(true);
         singleButton.setText("Single");
 
         occupationLabel.setText("Occupation");
