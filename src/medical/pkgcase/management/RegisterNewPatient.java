@@ -44,7 +44,6 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         phoneLabel = new javax.swing.JLabel();
         phoneInput = new javax.swing.JTextField();
         dobLabel = new javax.swing.JLabel();
-        dobPicker = new org.jdesktop.swingx.JXDatePicker();
         maritalLabel = new javax.swing.JLabel();
         marriedButton = new javax.swing.JRadioButton();
         occupationLabel = new javax.swing.JLabel();
@@ -60,6 +59,11 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         pastMedicalInput = new javax.swing.JTextArea();
         registerButton = new javax.swing.JButton();
+        dateInput = new javax.swing.JTextField();
+        dateSeperatorLabel1 = new javax.swing.JLabel();
+        monthInput = new javax.swing.JTextField();
+        yearInput = new javax.swing.JTextField();
+        dateSeperatorLabel2 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -94,7 +98,7 @@ public class RegisterNewPatient extends javax.swing.JFrame {
 
         phoneLabel.setText("Phone");
 
-        dobLabel.setText("DOB");
+        dobLabel.setText("DOB(DD/MM/YYYY)");
 
         maritalLabel.setText("Marital Status");
 
@@ -135,6 +139,10 @@ public class RegisterNewPatient extends javax.swing.JFrame {
             }
         });
 
+        dateSeperatorLabel1.setText("//");
+
+        dateSeperatorLabel2.setText("//");
+
         javax.swing.GroupLayout personalPanelLayout = new javax.swing.GroupLayout(personalPanel);
         personalPanel.setLayout(personalPanelLayout);
         personalPanelLayout.setHorizontalGroup(
@@ -160,12 +168,11 @@ public class RegisterNewPatient extends javax.swing.JFrame {
                         .addComponent(lastNameLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lastNameInput))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addComponent(jScrollPane2)
                     .addGroup(personalPanelLayout.createSequentialGroup()
                         .addGroup(personalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(bloodGroupComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dobPicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(personalPanelLayout.createSequentialGroup()
                                 .addComponent(maleButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -173,16 +180,27 @@ public class RegisterNewPatient extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(otherButton))
                             .addGroup(personalPanelLayout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(registerButton))
+                            .addGroup(personalPanelLayout.createSequentialGroup()
+                                .addGap(1, 1, 1)
                                 .addComponent(marriedButton)
-                                .addGap(18, 18, 18)
+                                .addGap(54, 54, 54)
                                 .addComponent(singleButton))
                             .addGroup(personalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(emailInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, personalPanelLayout.createSequentialGroup()
+                                    .addComponent(dateInput, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(dateSeperatorLabel1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(monthInput, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(dateSeperatorLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(yearInput))
+                                .addComponent(emailInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
                                 .addComponent(occupationInput, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(phoneInput, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addGroup(personalPanelLayout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addComponent(registerButton)))
+                                .addComponent(phoneInput, javax.swing.GroupLayout.Alignment.LEADING)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -207,7 +225,11 @@ public class RegisterNewPatient extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addGroup(personalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(dobLabel)
-                    .addComponent(dobPicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dateInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dateSeperatorLabel1)
+                    .addComponent(monthInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(yearInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dateSeperatorLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(personalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(marriedButton)
@@ -312,8 +334,10 @@ public class RegisterNewPatient extends javax.swing.JFrame {
     private javax.swing.JLabel addressLabel;
     private javax.swing.JComboBox<String> bloodGroupComboBox;
     private javax.swing.JLabel bloodGroupLabel;
+    private javax.swing.JTextField dateInput;
+    private javax.swing.JLabel dateSeperatorLabel1;
+    private javax.swing.JLabel dateSeperatorLabel2;
     private javax.swing.JLabel dobLabel;
-    private org.jdesktop.swingx.JXDatePicker dobPicker;
     private javax.swing.JTextField emailInput;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JRadioButton femaleButton;
@@ -330,6 +354,7 @@ public class RegisterNewPatient extends javax.swing.JFrame {
     private javax.swing.JLabel maritalLabel;
     private javax.swing.ButtonGroup maritalStatusGroup;
     private javax.swing.JRadioButton marriedButton;
+    private javax.swing.JTextField monthInput;
     private javax.swing.JTextField occupationInput;
     private javax.swing.JLabel occupationLabel;
     private javax.swing.JRadioButton otherButton;
@@ -340,5 +365,6 @@ public class RegisterNewPatient extends javax.swing.JFrame {
     private javax.swing.JLabel phoneLabel;
     private javax.swing.JButton registerButton;
     private javax.swing.JRadioButton singleButton;
+    private javax.swing.JTextField yearInput;
     // End of variables declaration//GEN-END:variables
 }

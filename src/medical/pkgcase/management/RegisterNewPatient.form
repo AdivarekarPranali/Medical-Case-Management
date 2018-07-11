@@ -87,12 +87,11 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="lastNameInput" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="jScrollPane1" alignment="0" pref="223" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                       <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="bloodGroupComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="dobPicker" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="maleButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -101,18 +100,30 @@
                                   <Component id="otherButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="registerButton" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                   <Component id="marriedButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                                   <Component id="singleButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="emailInput" alignment="0" pref="150" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="dateInput" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="dateSeperatorLabel1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="monthInput" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="dateSeperatorLabel2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="yearInput" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="emailInput" alignment="0" pref="176" max="32767" attributes="0"/>
                                   <Component id="occupationInput" alignment="0" max="32767" attributes="0"/>
                                   <Component id="phoneInput" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Component id="registerButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -146,7 +157,11 @@
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="dobLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dobPicker" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dateInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dateSeperatorLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="monthInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="yearInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dateSeperatorLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -252,10 +267,8 @@
         </Component>
         <Component class="javax.swing.JLabel" name="dobLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="DOB"/>
+            <Property name="text" type="java.lang.String" value="DOB(DD/MM/YYYY)"/>
           </Properties>
-        </Component>
-        <Component class="org.jdesktop.swingx.JXDatePicker" name="dobPicker">
         </Component>
         <Component class="javax.swing.JLabel" name="maritalLabel">
           <Properties>
@@ -360,6 +373,22 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registerButtonActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="dateInput">
+        </Component>
+        <Component class="javax.swing.JLabel" name="dateSeperatorLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="//"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="monthInput">
+        </Component>
+        <Component class="javax.swing.JTextField" name="yearInput">
+        </Component>
+        <Component class="javax.swing.JLabel" name="dateSeperatorLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="//"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
