@@ -5,10 +5,43 @@
  */
 package medical.pkgcase.management;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author vish
  */
+class Patient
+{
+
+    String name, dob, phone_num;
+    Patient(String n, String d, String p)
+    {
+        name = n;
+        dob = d;
+        phone_num = p;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+    public String getDob()
+    {
+        return dob;
+    }
+    public String getPhoneNum()
+    {
+        return phone_num;
+    }
+}
+
 public class Search extends javax.swing.JFrame {
 
     /**
@@ -30,30 +63,49 @@ public class Search extends javax.swing.JFrame {
 
         jPanel10 = new javax.swing.JPanel();
         firstNameLabel = new javax.swing.JLabel();
-        firstNameInput = new javax.swing.JTextField();
-        lastNameLabel = new javax.swing.JLabel();
-        lastNameInput = new javax.swing.JTextField();
+        searchKeyInput = new javax.swing.JTextField();
+        searchCriteriaLabel = new javax.swing.JLabel();
         searchButton = new javax.swing.JButton();
-        infoLabel = new javax.swing.JLabel();
+        searchCriteriaComboBox = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        patientListTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("Search"));
         jPanel10.setName(""); // NOI18N
 
-        firstNameLabel.setText("First Name");
+        firstNameLabel.setText("Search Key");
 
-        firstNameInput.addActionListener(new java.awt.event.ActionListener() {
+        searchKeyInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                firstNameInputActionPerformed(evt);
+                searchKeyInputActionPerformed(evt);
             }
         });
 
-        lastNameLabel.setText("Last Name");
+        searchCriteriaLabel.setText("Search Criteriia");
 
         searchButton.setText("Search");
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButtonActionPerformed(evt);
+            }
+        });
 
-        infoLabel.setText("Enter the name of the patient you'd like to search - ");
+        searchCriteriaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Id", "Name", "Phone Number", "Diagnosis" }));
+
+        patientListTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(patientListTable);
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -62,57 +114,133 @@ public class Search extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(infoLabel)
                             .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addGap(35, 35, 35)
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lastNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(searchCriteriaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(firstNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(firstNameInput)
-                                    .addComponent(lastNameInput, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)))))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(searchButton)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                                    .addComponent(searchKeyInput)
+                                    .addComponent(searchCriteriaComboBox, 0, 133, Short.MAX_VALUE)))
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addGap(148, 148, 148)
+                                .addComponent(searchButton)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                        .addGap(0, 12, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(infoLabel)
-                .addGap(18, 18, 18)
+                .addGap(47, 47, 47)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(firstNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchKeyInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(firstNameLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lastNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lastNameLabel))
+                    .addComponent(searchCriteriaLabel)
+                    .addComponent(searchCriteriaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(searchButton)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        jPanel10.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void firstNameInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameInputActionPerformed
+    private void searchKeyInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchKeyInputActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_firstNameInputActionPerformed
+    }//GEN-LAST:event_searchKeyInputActionPerformed
+
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+        // TODO add your handling code here:
+        String searchKey = searchKeyInput.getText();
+        String searchCriteria = searchCriteriaComboBox.getSelectedItem().toString();
+        
+        String url = "jdbc:mysql://localhost:3306/medical_case_mgmt?autoReconnect=true&useSSL=false";
+        String user = "vjtidev";
+        String password = "vjti@123";
+        
+        String query = "SELECT name,dob,phone_num from patient_det where "+searchCriteria+" like ?" ;
+        ArrayList<Patient> patientDetails = new ArrayList();
+
+        try {
+            Connection con = DriverManager.getConnection(url, user, password);
+            PreparedStatement st = con.prepareStatement(query);
+            ResultSet rs;
+
+            st.setString(1,"%" + searchKey + "%");
+
+            //rs = st.executeQuery("SELECT name FROM patient_det");
+            
+            rs = st.executeQuery();
+            
+            while(rs.next())
+            {
+                
+
+                String username = rs.getString("name");
+		String dob = rs.getString("dob");
+		String phone_num = rs.getString("phone_num");
+		System.out.println("dob : " + dob);
+		System.out.println("username : " + username);
+                Patient p = new Patient(username, dob, phone_num);
+                patientDetails.add(p);
+
+            }
+
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        } 
+        
+        DefaultTableModel model = new DefaultTableModel();
+
+        Object[] columnsName = new Object[1];
+        
+        columnsName[0] = "Name";       
+        
+        model.setColumnIdentifiers(columnsName);        
+
+        Object[] rowData = new Object[4];        
+
+        for(int i = 0; i < patientDetails.size(); i++)
+        {            
+
+            rowData[0] = patientDetails.get(i).getName();
+            
+            model.addRow(rowData);
+
+        }
+
+        patientListTable.setModel(model);
+        
+
+        
+        
+    }//GEN-LAST:event_searchButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,12 +278,13 @@ public class Search extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField firstNameInput;
     private javax.swing.JLabel firstNameLabel;
-    private javax.swing.JLabel infoLabel;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JTextField lastNameInput;
-    private javax.swing.JLabel lastNameLabel;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable patientListTable;
     private javax.swing.JButton searchButton;
+    private javax.swing.JComboBox<String> searchCriteriaComboBox;
+    private javax.swing.JLabel searchCriteriaLabel;
+    private javax.swing.JTextField searchKeyInput;
     // End of variables declaration//GEN-END:variables
 }
