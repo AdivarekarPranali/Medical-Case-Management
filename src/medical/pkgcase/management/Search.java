@@ -20,12 +20,13 @@ import javax.swing.table.DefaultTableModel;
 class Patient
 {
 
-    String name, dob, phone_num;
-    Patient(String n, String d, String p)
+    String name, dob, phone_num, id;
+    Patient( String i, String n, String d, String p)
     {
         name = n;
         dob = d;
         phone_num = p;
+        id = i;
     }
     
     public String getName()
@@ -40,9 +41,15 @@ class Patient
     {
         return phone_num;
     }
+    public String getId()
+    {
+        return id;
+    }
 }
 
 public class Search extends javax.swing.JFrame {
+    ArrayList<Patient> patientDetails = new ArrayList();
+
 
     /**
      * Creates new form Search
@@ -93,6 +100,7 @@ public class Search extends javax.swing.JFrame {
         });
 
         searchCriteriaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Id", "Name", "Phone Number", "Diagnosis" }));
+        searchCriteriaComboBox.setName(""); // NOI18N
 
         patientListTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -105,6 +113,11 @@ public class Search extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        patientListTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                patientListTableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(patientListTable);
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -179,13 +192,18 @@ public class Search extends javax.swing.JFrame {
         // TODO add your handling code here:
         String searchKey = searchKeyInput.getText();
         String searchCriteria = searchCriteriaComboBox.getSelectedItem().toString();
+        patientDetails.clear();
+        if(searchCriteria.equals("Phone Number"))
+        {
+            searchCriteria = new String("phone_num");
+        }
+        
         
         String url = "jdbc:mysql://localhost:3306/medical_case_mgmt?autoReconnect=true&useSSL=false";
         String user = "vjtidev";
         String password = "vjti@123";
         
-        String query = "SELECT name,dob,phone_num from patient_det where "+searchCriteria+" like ?" ;
-        ArrayList<Patient> patientDetails = new ArrayList();
+        String query = "SELECT UNIX_TIMESTAMP(id) as id,name,dob,phone_num from patient_det where "+searchCriteria+" like ?" ;
 
         try {
             Connection con = DriverManager.getConnection(url, user, password);
@@ -205,9 +223,9 @@ public class Search extends javax.swing.JFrame {
                 String username = rs.getString("name");
 		String dob = rs.getString("dob");
 		String phone_num = rs.getString("phone_num");
-		System.out.println("dob : " + dob);
-		System.out.println("username : " + username);
-                Patient p = new Patient(username, dob, phone_num);
+		String id = rs.getString("id");
+		System.out.println("id : " + id);
+                Patient p = new Patient(id, username, dob, phone_num);
                 patientDetails.add(p);
 
             }
@@ -218,9 +236,12 @@ public class Search extends javax.swing.JFrame {
         
         DefaultTableModel model = new DefaultTableModel();
 
-        Object[] columnsName = new Object[1];
+        Object[] columnsName = new Object[4];
         
-        columnsName[0] = "Name";       
+        columnsName[0] = "Id"; 
+        columnsName[1] = "Name";    
+        columnsName[2] = "DOB";    
+        columnsName[3] = "Phone Num";       
         
         model.setColumnIdentifiers(columnsName);        
 
@@ -229,8 +250,10 @@ public class Search extends javax.swing.JFrame {
         for(int i = 0; i < patientDetails.size(); i++)
         {            
 
-            rowData[0] = patientDetails.get(i).getName();
-            
+            rowData[0] = patientDetails.get(i).getId();
+            rowData[1] = patientDetails.get(i).getName();
+            rowData[2] = patientDetails.get(i).getDob();
+            rowData[3] = patientDetails.get(i).getPhoneNum();
             model.addRow(rowData);
 
         }
@@ -241,6 +264,13 @@ public class Search extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_searchButtonActionPerformed
+
+    private void patientListTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_patientListTableMouseClicked
+        // TODO add your handling code here:
+        int row  = patientListTable.getSelectedRow();
+        System.out.println(patientDetails.get(row).getId());
+                
+    }//GEN-LAST:event_patientListTableMouseClicked
 
     /**
      * @param args the command line arguments
