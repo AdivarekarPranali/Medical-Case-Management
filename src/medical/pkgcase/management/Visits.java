@@ -5,6 +5,13 @@
  */
 package medical.pkgcase.management;
 
+import java.io.File;
+import static java.lang.ProcessBuilder.Redirect.from;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
 /**
  *
  * @author vish
@@ -16,6 +23,17 @@ public class Visits extends javax.swing.JFrame {
      */
     public Visits() {
         initComponents();
+        
+        String visitID = "";
+                fileChooser.setAcceptAllFileFilterUsed(false);
+        FileNameExtensionFilter jpgfilter = new FileNameExtensionFilter("JPEG Files", "jpg");
+        FileNameExtensionFilter pngfilter = new FileNameExtensionFilter("PNG Files", "png");
+               
+
+
+        fileChooser.addChoosableFileFilter(jpgfilter);
+                fileChooser.addChoosableFileFilter(pngfilter);
+
                 setVisible(true);
 
     }
@@ -30,23 +48,34 @@ public class Visits extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        jScrollPane31 = new javax.swing.JScrollPane();
+        jPanel13 = new javax.swing.JPanel();
+        chiefComplaintLabel = new javax.swing.JLabel();
+        jScrollPane32 = new javax.swing.JScrollPane();
+        chiefComplaintInput = new javax.swing.JTextArea();
+        originLabel = new javax.swing.JLabel();
+        jScrollPane33 = new javax.swing.JScrollPane();
+        originInput = new javax.swing.JTextArea();
+        durationLabel = new javax.swing.JLabel();
+        jScrollPane34 = new javax.swing.JScrollPane();
+        durationInput = new javax.swing.JTextArea();
+        progressLabel = new javax.swing.JLabel();
+        jScrollPane35 = new javax.swing.JScrollPane();
+        progressInput = new javax.swing.JTextArea();
+        habitLabel = new javax.swing.JLabel();
+        jScrollPane36 = new javax.swing.JScrollPane();
+        habitInput = new javax.swing.JTextArea();
         jScrollPane18 = new javax.swing.JScrollPane();
         jPanel12 = new javax.swing.JPanel();
         appetiteLabel = new javax.swing.JLabel();
         thirstLabel = new javax.swing.JLabel();
-        jScrollPane19 = new javax.swing.JScrollPane();
-        thirstInput = new javax.swing.JTextArea();
-        desireLabel = new javax.swing.JLabel();
-        jScrollPane20 = new javax.swing.JScrollPane();
-        desireInput = new javax.swing.JTextArea();
+        likeLabel = new javax.swing.JLabel();
         aversionLabel = new javax.swing.JLabel();
         jScrollPane21 = new javax.swing.JScrollPane();
         aversionInput = new javax.swing.JTextArea();
         stoolLabel = new javax.swing.JLabel();
         jScrollPane22 = new javax.swing.JScrollPane();
         stoolInput = new javax.swing.JTextArea();
-        jScrollPane23 = new javax.swing.JScrollPane();
-        urineInput = new javax.swing.JTextArea();
         jScrollPane24 = new javax.swing.JScrollPane();
         appetiteInput = new javax.swing.JTextArea();
         urineLabel = new javax.swing.JLabel();
@@ -68,6 +97,12 @@ public class Visits extends javax.swing.JFrame {
         gynacHistoryInput = new javax.swing.JTextArea();
         jScrollPane30 = new javax.swing.JScrollPane();
         mindInput = new javax.swing.JTextArea();
+        likeComboBox = new javax.swing.JComboBox<>();
+        urineComboBox = new javax.swing.JComboBox<>();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        thirstInput = new javax.swing.JTextArea();
+        extraLikesInput = new javax.swing.JTextField();
+        extraUrineInput = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         pePanel = new javax.swing.JPanel();
         generalTitleLabel = new javax.swing.JLabel();
@@ -105,23 +140,7 @@ public class Visits extends javax.swing.JFrame {
         probableRemediesLabel = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         probableRemediesInput = new javax.swing.JTextArea();
-        jScrollPane31 = new javax.swing.JScrollPane();
-        jPanel13 = new javax.swing.JPanel();
-        chiefComplaintLabel = new javax.swing.JLabel();
-        jScrollPane32 = new javax.swing.JScrollPane();
-        chiefComplaintInput = new javax.swing.JTextArea();
-        originLabel = new javax.swing.JLabel();
-        jScrollPane33 = new javax.swing.JScrollPane();
-        originInput = new javax.swing.JTextArea();
-        durationLabel = new javax.swing.JLabel();
-        jScrollPane34 = new javax.swing.JScrollPane();
-        durationInput = new javax.swing.JTextArea();
-        progressLabel = new javax.swing.JLabel();
-        jScrollPane35 = new javax.swing.JScrollPane();
-        progressInput = new javax.swing.JTextArea();
-        habitLabel = new javax.swing.JLabel();
-        jScrollPane36 = new javax.swing.JScrollPane();
-        habitInput = new javax.swing.JTextArea();
+        fileChooser = new javax.swing.JFileChooser();
         saveButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -130,23 +149,113 @@ public class Visits extends javax.swing.JFrame {
         jTabbedPane1.setMinimumSize(new java.awt.Dimension(208, 43));
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(211, 50));
 
+        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Visits"));
+
+        chiefComplaintLabel.setText("Chief Complaint");
+
+        chiefComplaintInput.setColumns(20);
+        chiefComplaintInput.setLineWrap(true);
+        chiefComplaintInput.setRows(5);
+        jScrollPane32.setViewportView(chiefComplaintInput);
+
+        originLabel.setText("Origin");
+
+        originInput.setColumns(20);
+        originInput.setLineWrap(true);
+        originInput.setRows(5);
+        jScrollPane33.setViewportView(originInput);
+
+        durationLabel.setText("Duration");
+
+        durationInput.setColumns(20);
+        durationInput.setLineWrap(true);
+        durationInput.setRows(5);
+        jScrollPane34.setViewportView(durationInput);
+
+        progressLabel.setText("Progress");
+
+        progressInput.setColumns(20);
+        progressInput.setLineWrap(true);
+        progressInput.setRows(5);
+        jScrollPane35.setViewportView(progressInput);
+
+        habitLabel.setText("Habit/Addiction");
+
+        habitInput.setColumns(20);
+        habitInput.setLineWrap(true);
+        habitInput.setRows(5);
+        jScrollPane36.setViewportView(habitInput);
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(durationLabel)
+                                    .addComponent(progressLabel)
+                                    .addComponent(originLabel))
+                                .addGap(54, 54, 54))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(habitLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane35, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                            .addComponent(jScrollPane34, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                            .addComponent(jScrollPane36, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(chiefComplaintLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane32, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
+                        .addGap(124, 124, 124)
+                        .addComponent(jScrollPane33, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)))
+                .addGap(24, 24, 24))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(chiefComplaintLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(originLabel)
+                    .addComponent(jScrollPane33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(durationLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(progressLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane36, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(habitLabel))
+                .addContainerGap(123, Short.MAX_VALUE))
+        );
+
+        jScrollPane31.setViewportView(jPanel13);
+
+        jTabbedPane1.addTab("Visit Details", jScrollPane31);
+
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Physical Generals"));
 
         appetiteLabel.setText("Appetite");
 
         thirstLabel.setText("Thirst");
 
-        thirstInput.setColumns(20);
-        thirstInput.setLineWrap(true);
-        thirstInput.setRows(5);
-        jScrollPane19.setViewportView(thirstInput);
-
-        desireLabel.setText("Desire");
-
-        desireInput.setColumns(20);
-        desireInput.setLineWrap(true);
-        desireInput.setRows(5);
-        jScrollPane20.setViewportView(desireInput);
+        likeLabel.setText("Likes");
 
         aversionLabel.setText("Aversion");
 
@@ -161,11 +270,6 @@ public class Visits extends javax.swing.JFrame {
         stoolInput.setLineWrap(true);
         stoolInput.setRows(5);
         jScrollPane22.setViewportView(stoolInput);
-
-        urineInput.setColumns(20);
-        urineInput.setLineWrap(true);
-        urineInput.setRows(5);
-        jScrollPane23.setViewportView(urineInput);
 
         appetiteInput.setColumns(20);
         appetiteInput.setLineWrap(true);
@@ -216,6 +320,14 @@ public class Visits extends javax.swing.JFrame {
         mindInput.setRows(5);
         jScrollPane30.setViewportView(mindInput);
 
+        likeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sweet", "Salty", "Sour", "Bitter", "Spicy" }));
+
+        urineComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Excessive", "Higher than normal", "Normal", "Slightly less than normal", "Dangerously low" }));
+
+        thirstInput.setColumns(20);
+        thirstInput.setRows(5);
+        jScrollPane4.setViewportView(thirstInput);
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -225,7 +337,7 @@ public class Visits extends javax.swing.JFrame {
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(appetiteLabel)
                     .addComponent(thirstLabel)
-                    .addComponent(desireLabel)
+                    .addComponent(likeLabel)
                     .addComponent(aversionLabel)
                     .addComponent(stoolLabel)
                     .addComponent(urineLabel)
@@ -237,18 +349,27 @@ public class Visits extends javax.swing.JFrame {
                     .addComponent(perspirationLabel))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
-                    .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
-                    .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
-                    .addComponent(jScrollPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
-                    .addComponent(jScrollPane23, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+                    .addComponent(jScrollPane21)
+                    .addComponent(jScrollPane22)
                     .addComponent(jScrollPane24)
                     .addComponent(jScrollPane25)
                     .addComponent(jScrollPane26)
                     .addComponent(jScrollPane27)
                     .addComponent(jScrollPane28)
                     .addComponent(jScrollPane29)
-                    .addComponent(jScrollPane30))
+                    .addComponent(jScrollPane30)
+                    .addComponent(jScrollPane4)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addComponent(likeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(extraLikesInput, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addComponent(urineComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(extraUrineInput, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
@@ -259,22 +380,26 @@ public class Visits extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                         .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(likeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(extraLikesInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(urineComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(extraUrineInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                         .addComponent(appetiteLabel)
                         .addGap(37, 37, 37)
                         .addComponent(thirstLabel)
                         .addGap(36, 36, 36)
-                        .addComponent(desireLabel)
+                        .addComponent(likeLabel)
                         .addGap(37, 37, 37)
                         .addComponent(aversionLabel)
                         .addGap(38, 38, 38)
@@ -534,105 +659,12 @@ public class Visits extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Diagnosis/Remedies", jScrollPane2);
 
-        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Visits"));
-
-        chiefComplaintLabel.setText("Chief Complaint");
-
-        chiefComplaintInput.setColumns(20);
-        chiefComplaintInput.setLineWrap(true);
-        chiefComplaintInput.setRows(5);
-        jScrollPane32.setViewportView(chiefComplaintInput);
-
-        originLabel.setText("Origin");
-
-        originInput.setColumns(20);
-        originInput.setLineWrap(true);
-        originInput.setRows(5);
-        jScrollPane33.setViewportView(originInput);
-
-        durationLabel.setText("Duration");
-
-        durationInput.setColumns(20);
-        durationInput.setLineWrap(true);
-        durationInput.setRows(5);
-        jScrollPane34.setViewportView(durationInput);
-
-        progressLabel.setText("Progress");
-
-        progressInput.setColumns(20);
-        progressInput.setLineWrap(true);
-        progressInput.setRows(5);
-        jScrollPane35.setViewportView(progressInput);
-
-        habitLabel.setText("Habit/Addiction");
-
-        habitInput.setColumns(20);
-        habitInput.setLineWrap(true);
-        habitInput.setRows(5);
-        jScrollPane36.setViewportView(habitInput);
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(durationLabel)
-                                    .addComponent(progressLabel)
-                                    .addComponent(originLabel))
-                                .addGap(54, 54, 54))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(habitLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane35, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
-                            .addComponent(jScrollPane34, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
-                            .addComponent(jScrollPane36, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(chiefComplaintLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane32, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
-                        .addGap(124, 124, 124)
-                        .addComponent(jScrollPane33, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)))
-                .addGap(24, 24, 24))
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chiefComplaintLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(originLabel)
-                    .addComponent(jScrollPane33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(durationLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(progressLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane36, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(habitLabel))
-                .addContainerGap(109, Short.MAX_VALUE))
-        );
-
-        jScrollPane31.setViewportView(jPanel13);
-
-        jTabbedPane1.addTab("Visit Details", jScrollPane31);
+        fileChooser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fileChooserActionPerformed(evt);
+            }
+        });
+        jTabbedPane1.addTab("Save Diagnosis", fileChooser);
 
         saveButton.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
         saveButton.setText("Save");
@@ -671,6 +703,44 @@ public class Visits extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cvsInputActionPerformed
 
+    private void fileChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileChooserActionPerformed
+        // TODO add your handling code here:
+  if (evt.getActionCommand().equals(javax.swing.JFileChooser.APPROVE_SELECTION)) {
+        File theDir = new File("Diagnosis Storage Folder/"+File.separator+patientID+File.separator+visitID);
+        //File visitDir = new File(theDir + "/" + visitID);// Defining Directory/Folder Name  
+    try{   
+        if (!theDir.exists()){  // Checks that Directory/Folder Doesn't Exists!  
+         boolean result = theDir.mkdirs();    
+        }  
+    }catch(Exception e){  
+        JOptionPane.showMessageDialog(null, e);  
+    }  
+         counter++;        
+       
+         
+         
+         JOptionPane.showMessageDialog(null, "File number " + counter + " saved");
+         String path = fileChooser.getSelectedFile().getAbsolutePath();
+         JOptionPane.showMessageDialog(null, path);
+         
+         File src = new File(path);
+        File target = new File(theDir.getAbsolutePath()+File.separator+counter);
+
+        try
+        {
+        Files.copy(src.toPath(), target.toPath(), StandardCopyOption.REPLACE_EXISTING);
+        }
+        catch(Exception e)
+        {}
+                 
+
+        
+    } else if (evt.getActionCommand().equals(javax.swing.JFileChooser.CANCEL_SELECTION)) {
+    }
+    
+  
+    }//GEN-LAST:event_fileChooserActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -699,6 +769,8 @@ public class Visits extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Visits().setVisible(true);
@@ -706,6 +778,9 @@ public class Visits extends javax.swing.JFrame {
         });
     }
 
+    public int counter = 0;
+    String patientID = "123123";
+    String visitID = "CXZ";
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea appetiteInput;
     private javax.swing.JLabel appetiteLabel;
@@ -717,13 +792,14 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JLabel cnsLabel;
     private javax.swing.JTextField cvsInput;
     private javax.swing.JLabel cvsLabel;
-    private javax.swing.JTextArea desireInput;
-    private javax.swing.JLabel desireLabel;
     private javax.swing.JPanel diagPanel;
     private javax.swing.JTextArea dreamsInput;
     private javax.swing.JLabel dreamsLabel;
     private javax.swing.JTextArea durationInput;
     private javax.swing.JLabel durationLabel;
+    private javax.swing.JTextField extraLikesInput;
+    private javax.swing.JTextField extraUrineInput;
+    private javax.swing.JFileChooser fileChooser;
     private javax.swing.JTextArea finalDiagnosisInput;
     private javax.swing.JLabel finalDiagnosisLabel;
     private javax.swing.JLabel generalTitleLabel;
@@ -738,12 +814,9 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane18;
-    private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane20;
     private javax.swing.JScrollPane jScrollPane21;
     private javax.swing.JScrollPane jScrollPane22;
-    private javax.swing.JScrollPane jScrollPane23;
     private javax.swing.JScrollPane jScrollPane24;
     private javax.swing.JScrollPane jScrollPane25;
     private javax.swing.JScrollPane jScrollPane26;
@@ -758,7 +831,10 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane34;
     private javax.swing.JScrollPane jScrollPane35;
     private javax.swing.JScrollPane jScrollPane36;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JComboBox<String> likeComboBox;
+    private javax.swing.JLabel likeLabel;
     private javax.swing.JTextField miasmInput;
     private javax.swing.JLabel miasmLabel;
     private javax.swing.JTextArea mindInput;
@@ -798,7 +874,7 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JLabel thermallyLabel;
     private javax.swing.JTextArea thirstInput;
     private javax.swing.JLabel thirstLabel;
-    private javax.swing.JTextArea urineInput;
+    private javax.swing.JComboBox<String> urineComboBox;
     private javax.swing.JLabel urineLabel;
     private javax.swing.JLabel vitalTitleLabel;
     // End of variables declaration//GEN-END:variables
