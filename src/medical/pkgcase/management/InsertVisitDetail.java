@@ -5,9 +5,11 @@
  */
 package medical.pkgcase.management;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -64,7 +66,46 @@ public class InsertVisitDetail
             st.setString(32,probable_remedies);
             
             st.executeUpdate();
-            System.out.println("Data inserted!");
+            System.out.println("Data inserted!");            
+
+            System.out.println(i);            
+            query = new String("select id from patient_visit_det where patient_id = ? order by id desc LIMIT 1");
+            st = con.prepareStatement(query);
+                        st.setString(1, i);
+
+            System.out.println("qwer");
+            ResultSet rset = st.executeQuery();
+            String visit_id = new String();            
+            while(rset.next())
+            {
+                System.out.println(rset.getString("id")); 
+                visit_id = rset.getString("id");
+            }
+            System.out.println("asdd");
+            
+            String patientID = i;
+            String visitID = visit_id;
+            patientID=patientID.replaceAll(":", "");
+            patientID=patientID.replaceAll("-", "");
+            visitID=visitID.replaceAll(":", "");
+            visitID=visitID.replaceAll("-", "");
+            File theDir = new File("Diagnosis Storage Folder/"+File.separator+patientID+File.separator+visitID);
+            String path = theDir.getAbsolutePath();
+
+            System.out.println(path.length());
+
+            query = new String("update patient_visit_det set folder_link = ? where id = ? and patient_id = ?");
+            st = con.prepareCall(query);
+            st.setString(1, path);
+            st.setString(2, visit_id);
+            st.setString(3, i);
+            st.executeUpdate();
+            System.out.println("Updated!");
+            
+            
+            SaveImages save = new SaveImages(i,visit_id);
+            
+            System.out.println("sjhsads");
         } catch (SQLException ex) {
             System.out.println(ex);
         } 

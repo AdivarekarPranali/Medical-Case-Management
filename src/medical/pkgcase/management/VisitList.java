@@ -19,8 +19,8 @@ import javax.swing.table.DefaultTableModel;
  */
 class PatientVisits
 {
-    String id, chiefComplain, origin, duration, progress, addiction, appetite, thirst, desire, aversion, stool, urine, perspiration, sleep, dreams, thermally, gynac_history, mind, temp, pulse, blood_pressure, resp_rate, others, cvs, rs, cns, pa, invg_advised, miasm, susceptibility, final_diagnosis, probable_remedies;
-    PatientVisits( String i, String cc, String o, String d,String  progress,String  addiction,String  appetite,String  thirst,String  desire,String  aversion,String  stool,String  urine,String  perspiration,String  sleep,String  dreams,String  thermally,String  gynac_history,String  mind,String  temp,String  pulse,String  blood_pressure,String  resp_rate,String  others,String  cvs,String  rs,String  cns,String  pa,String  invg_advised,String  miasm,String  susceptibility,String  final_diagnosis,String  probable_remedies)
+    String id, chiefComplain, origin, duration, progress, addiction, appetite, thirst, desire, aversion, stool, urine, perspiration, sleep, dreams, thermally, gynac_history, mind, temp, pulse, blood_pressure, resp_rate, others, cvs, rs, cns, pa, invg_advised, miasm, susceptibility, final_diagnosis, probable_remedies, link;
+    PatientVisits( String i, String cc, String o, String d,String  progress,String  addiction,String  appetite,String  thirst,String  desire,String  aversion,String  stool,String  urine,String  perspiration,String  sleep,String  dreams,String  thermally,String  gynac_history,String  mind,String  temp,String  pulse,String  blood_pressure,String  resp_rate,String  others,String  cvs,String  rs,String  cns,String  pa,String  invg_advised,String  miasm,String  susceptibility,String  final_diagnosis,String  probable_remedies, String l)
     {
         id = i;
         chiefComplain = cc;
@@ -55,6 +55,7 @@ class PatientVisits
         this. final_diagnosis= final_diagnosis;	
         this. probable_remedies= probable_remedies;
 
+        link = l;
         
     }
     
@@ -187,6 +188,9 @@ class PatientVisits
         return probable_remedies;
     }
     
+    public String getLink() {
+        return link;
+    }
 }
 
 
@@ -258,11 +262,12 @@ public class VisitList extends javax.swing.JFrame {
                 String  susceptibility = rs.getString("susceptibility");	
                 String  final_diagnosis = rs.getString("final_diagnosis");	
                 String  probable_remedies = rs.getString("probable_remedies");	
+                String link = rs.getString("folder_link");
                
         
 		//String ph = rs.getString("past_med_history");
 		System.out.println("id : " + id);
-                PatientVisits p = new PatientVisits(visitId, chiefComplain, origin, duration,progress,addiction,appetite,thirst,desire,aversion,stool,urine,perspiration,sleep,dreams,thermally,gynac_history,mind,temp,pulse,blood_pressure,resp_rate,others,cvs,rs_pat,cns,pa,invg_advised,miasm,susceptibility,final_diagnosis,probable_remedies);
+                PatientVisits p = new PatientVisits(visitId, chiefComplain, origin, duration,progress,addiction,appetite,thirst,desire,aversion,stool,urine,perspiration,sleep,dreams,thermally,gynac_history,mind,temp,pulse,blood_pressure,resp_rate,others,cvs,rs_pat,cns,pa,invg_advised,miasm,susceptibility,final_diagnosis,probable_remedies,link);
                 patientVisits.add(p);
 
             }
@@ -273,7 +278,7 @@ public class VisitList extends javax.swing.JFrame {
         
         DefaultTableModel model = new DefaultTableModel();            
 
-        Object[] columnsName = new Object[32];
+        Object[] columnsName = new Object[33];
         System.out.println("outer");
         columnsName[0] = "Id"; 
         columnsName[1] = "Chief Complaint";    
@@ -306,12 +311,13 @@ public class VisitList extends javax.swing.JFrame {
         columnsName[28] = "miasm";	
         columnsName[29] = "susceptibility";	
         columnsName[30] = "final_diagnosis";	
-        columnsName[31] = "probable_remedies";        
+        columnsName[31] = "probable_remedies"; 
+        columnsName[32] = "Link";
         
         model.setColumnIdentifiers(columnsName);        
 
         System.out.println("outerp");
-        Object[] rowData = new Object[32];        
+        Object[] rowData = new Object[33];        
 
         for(int i = 0; i < patientVisits.size(); i++)
         {            
@@ -348,6 +354,7 @@ public class VisitList extends javax.swing.JFrame {
             rowData[30] = patientVisits.get(i).getFinal_diagnosis();	
             rowData[31] = patientVisits.get(i).getProbable_remedies();	
 
+            rowData[32] = patientVisits.get(i).getLink();
             
             model.addRow(rowData);
         }
@@ -373,6 +380,7 @@ public class VisitList extends javax.swing.JFrame {
         patientDetails = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         visitTable = new javax.swing.JTable();
+        registerNewComplaintButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -397,7 +405,20 @@ public class VisitList extends javax.swing.JFrame {
         visitTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         visitTable.setPreferredSize(new java.awt.Dimension(2500, 400));
         visitTable.setRowHeight(100);
+        visitTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                visitTableMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(visitTable);
+
+        registerNewComplaintButton.setText("Register New Complaint");
+        registerNewComplaintButton.setActionCommand("Register New Complaint");
+        registerNewComplaintButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerNewComplaintButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -409,6 +430,10 @@ public class VisitList extends javax.swing.JFrame {
                     .addComponent(jScrollPane1)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(354, 354, 354)
+                .addComponent(registerNewComplaintButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -416,12 +441,38 @@ public class VisitList extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(registerNewComplaintButton)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void visitTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visitTableMouseClicked
+        // TODO add your handling code here:
+        int row = visitTable.getSelectedRow();
+        int col = visitTable.getSelectedColumn();
+        if(col == 32)
+        {
+            Object o = (Object) visitTable.getValueAt(row,col);
+            String path = String.valueOf(o);
+           try
+           {
+           Runtime.getRuntime().exec("explorer.exe /select," + path);
+           }
+           catch(Exception e)
+           {}
+            System.out.println("clicked");
+            
+        }
+    }//GEN-LAST:event_visitTableMouseClicked
+
+    private void registerNewComplaintButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerNewComplaintButtonActionPerformed
+        // TODO add your handling code here:
+        //Visit v = new Visit();
+    }//GEN-LAST:event_registerNewComplaintButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -457,11 +508,14 @@ public class VisitList extends javax.swing.JFrame {
             }
         });
     }
+    
+    static String pathtemp;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea patientDetails;
+    private javax.swing.JButton registerNewComplaintButton;
     private javax.swing.JTable visitTable;
     // End of variables declaration//GEN-END:variables
 }
