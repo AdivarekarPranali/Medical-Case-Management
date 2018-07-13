@@ -290,7 +290,42 @@ public class RegisterNewPatient extends javax.swing.JFrame {
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
 
-        Visits visit = new Visits();
+        String address;
+    String dob;
+    String email;
+    String name;
+    String blood;
+    String phone;
+    String pastMedical;
+    String occupation;
+    String marital;
+    String gender;
+    
+    address=addressInput.getText();
+    dob=dateInput.getText()+"/"+monthInput.getText()+"/"+yearInput.getText();
+    email=emailInput.getText();
+    name=firstNameInput.getText()+" "+lastNameInput.getText();
+    blood=bloodGroupComboBox.getSelectedItem().toString();
+    phone=phoneInput.getText();
+    pastMedical=pastMedicalInput.getText();
+    occupation=occupationInput.getText();
+
+    if(maleButton.isSelected())
+        gender="Male";
+    else if(femaleButton.isSelected())
+        gender="Female";
+    else
+        gender="Other";
+    
+    if(marriedButton.isSelected())
+        marital="Married";
+    else
+        marital="Single";
+
+        InsertPatientDetails ins = new InsertPatientDetails(name,address, dob, blood, email, phone, pastMedical, occupation, marital,gender);
+        
+        
+        
 
     }//GEN-LAST:event_registerButtonActionPerformed
 

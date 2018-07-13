@@ -20,13 +20,14 @@ import javax.swing.table.DefaultTableModel;
 class Patient
 {
 
-    String name, dob, phone_num, id;
-    Patient( String i, String n, String d, String p)
+    String name, dob, phone_num, id, pastHistory;
+    Patient( String i, String n, String d, String p, String ph)
     {
         name = n;
         dob = d;
         phone_num = p;
         id = i;
+        pastHistory = ph;
     }
     
     public String getName()
@@ -44,6 +45,10 @@ class Patient
     public String getId()
     {
         return id;
+    }
+    public String getPH()
+    {
+        return pastHistory;
     }
 }
 
@@ -203,7 +208,7 @@ public class Search extends javax.swing.JFrame {
         String user = "vjtidev";
         String password = "vjti@123";
         
-        String query = "SELECT UNIX_TIMESTAMP(id) as id,name,dob,phone_num from patient_det where "+searchCriteria+" like ?" ;
+        String query = "SELECT UNIX_TIMESTAMP(id) as id,name,dob,phone_num,past_med_history from patient_det where "+searchCriteria+" like ?" ;
 
         try {
             Connection con = DriverManager.getConnection(url, user, password);
@@ -224,8 +229,9 @@ public class Search extends javax.swing.JFrame {
 		String dob = rs.getString("dob");
 		String phone_num = rs.getString("phone_num");
 		String id = rs.getString("id");
+		String ph = rs.getString("past_med_history");
 		System.out.println("id : " + id);
-                Patient p = new Patient(id, username, dob, phone_num);
+                Patient p = new Patient(id, username, dob, phone_num, ph);
                 patientDetails.add(p);
 
             }
@@ -258,18 +264,14 @@ public class Search extends javax.swing.JFrame {
 
         }
 
-        patientListTable.setModel(model);
-        
-
-        
+        patientListTable.setModel(model);               
         
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void patientListTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_patientListTableMouseClicked
         // TODO add your handling code here:
-        int row  = patientListTable.getSelectedRow();
-        System.out.println(patientDetails.get(row).getId());
-                
+        int row = patientListTable.getSelectedRow();
+        VisitList vl = new VisitList(patientDetails.get(row).getId(),patientDetails.get(row).getName(),patientDetails.get(row).getPH());
     }//GEN-LAST:event_patientListTableMouseClicked
 
     /**

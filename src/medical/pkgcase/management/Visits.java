@@ -21,9 +21,10 @@ public class Visits extends javax.swing.JFrame {
     /**
      * Creates new form Visits
      */
-    public Visits() {
+    String pat_id = new String();
+    public Visits(String pat_id) {
         initComponents();
-        
+        this.pat_id = pat_id;
         String visitID = "";
                 fileChooser.setAcceptAllFileFilterUsed(false);
         FileNameExtensionFilter jpgfilter = new FileNameExtensionFilter("JPEG Files", "jpg");
@@ -103,6 +104,18 @@ public class Visits extends javax.swing.JFrame {
         thirstInput = new javax.swing.JTextArea();
         extraLikesInput = new javax.swing.JTextField();
         extraUrineInput = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        diagPanel = new javax.swing.JPanel();
+        susceptibilityLabel = new javax.swing.JLabel();
+        susceptibulityInput = new javax.swing.JScrollPane();
+        susceptibilityInput = new javax.swing.JTextArea();
+        finalDiagnosisLabel = new javax.swing.JLabel();
+        jScrollPane = new javax.swing.JScrollPane();
+        finalDiagnosisInput = new javax.swing.JTextArea();
+        probableRemediesLabel = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        probableRemediesInput = new javax.swing.JTextArea();
+        fileChooser = new javax.swing.JFileChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
         pePanel = new javax.swing.JPanel();
         generalTitleLabel = new javax.swing.JLabel();
@@ -124,23 +137,13 @@ public class Visits extends javax.swing.JFrame {
         cnsInput = new javax.swing.JTextField();
         paLabel = new javax.swing.JLabel();
         paInput = new javax.swing.JScrollPane();
-        pAInput = new javax.swing.JTextArea();
+        invgInput = new javax.swing.JTextArea();
         invgLabel = new javax.swing.JLabel();
-        invgInput = new javax.swing.JTextField();
+        PAInput = new javax.swing.JTextField();
         miasmLabel = new javax.swing.JLabel();
         miasmInput = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        diagPanel = new javax.swing.JPanel();
-        susceptibilityLabel = new javax.swing.JLabel();
-        susceptibulityInput = new javax.swing.JScrollPane();
-        susceptibilityInput = new javax.swing.JTextArea();
-        finalDiagnosisLabel = new javax.swing.JLabel();
-        jScrollPane = new javax.swing.JScrollPane();
-        finalDiagnosisInput = new javax.swing.JTextArea();
-        probableRemediesLabel = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        probableRemediesInput = new javax.swing.JTextArea();
-        fileChooser = new javax.swing.JFileChooser();
+        bpLabel = new javax.swing.JLabel();
+        bpInput = new javax.swing.JTextField();
         saveButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -444,158 +447,6 @@ public class Visits extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Physical Details", jScrollPane18);
 
-        pePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Physical Examination"));
-
-        generalTitleLabel.setText("General -");
-
-        temperatureLabel.setText("Temperature");
-
-        pulseInput.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pulseInputActionPerformed(evt);
-            }
-        });
-
-        pulseLabel.setText("Pulse");
-
-        temperatureInput.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                temperatureInputActionPerformed(evt);
-            }
-        });
-
-        respiratoryRateLabel.setText("Respiratory Rate");
-
-        otherInput.setColumns(20);
-        otherInput.setLineWrap(true);
-        otherInput.setRows(5);
-        othersInput.setViewportView(otherInput);
-
-        othersLabel.setText("Others");
-
-        vitalTitleLabel.setText("Systemic with vital data - ");
-
-        cvsLabel.setText("CVS");
-
-        cvsInput.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cvsInputActionPerformed(evt);
-            }
-        });
-
-        rsLabel.setText("RS");
-
-        cnsLabel.setText("CNS");
-
-        paLabel.setText("P/A");
-
-        pAInput.setColumns(20);
-        pAInput.setLineWrap(true);
-        pAInput.setRows(5);
-        paInput.setViewportView(pAInput);
-
-        invgLabel.setText("INVG Assigned");
-
-        miasmLabel.setText("Miasm");
-
-        javax.swing.GroupLayout pePanelLayout = new javax.swing.GroupLayout(pePanel);
-        pePanel.setLayout(pePanelLayout);
-        pePanelLayout.setHorizontalGroup(
-            pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pePanelLayout.createSequentialGroup()
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pePanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(generalTitleLabel)
-                            .addComponent(vitalTitleLabel)))
-                    .addGroup(pePanelLayout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(temperatureLabel)
-                            .addComponent(pulseLabel)
-                            .addComponent(respiratoryRateLabel)
-                            .addComponent(othersLabel)
-                            .addGroup(pePanelLayout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rsLabel)
-                                    .addComponent(cvsLabel)
-                                    .addComponent(cnsLabel)
-                                    .addComponent(paLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(invgLabel)
-                                    .addComponent(miasmLabel))))
-                        .addGap(18, 18, 18)
-                        .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(othersInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(respiratoryRateInput, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                                .addComponent(pulseInput)
-                                .addComponent(temperatureInput))
-                            .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(rsInput, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cvsInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                                .addComponent(cnsInput))
-                            .addComponent(paInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(miasmInput, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(invgInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)))))
-                .addContainerGap(222, Short.MAX_VALUE))
-        );
-        pePanelLayout.setVerticalGroup(
-            pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pePanelLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(generalTitleLabel)
-                .addGap(18, 18, 18)
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(temperatureLabel)
-                    .addComponent(temperatureInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pulseInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pulseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(respiratoryRateInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(respiratoryRateLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(othersInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(othersLabel))
-                .addGap(21, 21, 21)
-                .addComponent(vitalTitleLabel)
-                .addGap(26, 26, 26)
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cvsLabel)
-                    .addComponent(cvsInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rsLabel)
-                    .addComponent(rsInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cnsInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cnsLabel))
-                .addGap(4, 4, 4)
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(paInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(paLabel))
-                .addGap(7, 7, 7)
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(invgLabel)
-                    .addComponent(invgInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(miasmLabel)
-                    .addComponent(miasmInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(288, Short.MAX_VALUE))
-        );
-
-        jScrollPane1.setViewportView(pePanel);
-
-        jTabbedPane1.addTab("Physical Examination", jScrollPane1);
-
         diagPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Diagnosis/Remedies"));
 
         susceptibilityLabel.setText("Susceptibility");
@@ -666,8 +517,197 @@ public class Visits extends javax.swing.JFrame {
         });
         jTabbedPane1.addTab("Save Diagnosis", fileChooser);
 
+        pePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Physical Examination"));
+
+        generalTitleLabel.setText("General -");
+
+        temperatureLabel.setText("Temperature");
+
+        pulseInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pulseInputActionPerformed(evt);
+            }
+        });
+
+        pulseLabel.setText("Pulse");
+
+        temperatureInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                temperatureInputActionPerformed(evt);
+            }
+        });
+
+        respiratoryRateLabel.setText("Respiratory Rate");
+
+        otherInput.setColumns(20);
+        otherInput.setLineWrap(true);
+        otherInput.setRows(5);
+        othersInput.setViewportView(otherInput);
+
+        othersLabel.setText("Others");
+
+        vitalTitleLabel.setText("Systemic with vital data - ");
+
+        cvsLabel.setText("CVS");
+
+        cvsInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cvsInputActionPerformed(evt);
+            }
+        });
+
+        rsLabel.setText("RS");
+
+        cnsLabel.setText("CNS");
+
+        paLabel.setText("P/A");
+
+        invgInput.setColumns(20);
+        invgInput.setLineWrap(true);
+        invgInput.setRows(5);
+        paInput.setViewportView(invgInput);
+
+        invgLabel.setText("INVG Assigned");
+
+        miasmLabel.setText("Miasm");
+
+        bpLabel.setText("Blood Pressure");
+
+        bpInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bpInputActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pePanelLayout = new javax.swing.GroupLayout(pePanel);
+        pePanel.setLayout(pePanelLayout);
+        pePanelLayout.setHorizontalGroup(
+            pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pePanelLayout.createSequentialGroup()
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(generalTitleLabel))
+                    .addGroup(pePanelLayout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pePanelLayout.createSequentialGroup()
+                                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(temperatureLabel)
+                                    .addComponent(pulseLabel))
+                                .addGap(40, 40, 40)
+                                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(pulseInput, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                                    .addComponent(temperatureInput)))
+                            .addGroup(pePanelLayout.createSequentialGroup()
+                                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(respiratoryRateLabel)
+                                    .addComponent(othersLabel)
+                                    .addComponent(bpLabel))
+                                .addGap(20, 20, 20)
+                                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(respiratoryRateInput)
+                                    .addGroup(pePanelLayout.createSequentialGroup()
+                                        .addComponent(othersInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(bpInput)))))
+                    .addGroup(pePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(vitalTitleLabel)
+                            .addGroup(pePanelLayout.createSequentialGroup()
+                                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pePanelLayout.createSequentialGroup()
+                                        .addGap(107, 107, 107)
+                                        .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(rsLabel)
+                                            .addComponent(cvsLabel)
+                                            .addComponent(cnsLabel)
+                                            .addComponent(paLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(miasmLabel))
+                                        .addGap(36, 36, 36))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pePanelLayout.createSequentialGroup()
+                                        .addComponent(invgLabel)
+                                        .addGap(18, 18, 18)))
+                                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(rsInput, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cvsInput, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cnsInput, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(paInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(miasmInput, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(PAInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addGap(222, 222, 222))
+        );
+        pePanelLayout.setVerticalGroup(
+            pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pePanelLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(generalTitleLabel)
+                .addGap(18, 18, 18)
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(temperatureLabel)
+                    .addComponent(temperatureInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pulseInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pulseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(7, 7, 7)
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bpLabel)
+                    .addComponent(bpInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(respiratoryRateInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(respiratoryRateLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(othersInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(othersLabel))
+                .addGap(18, 18, 18)
+                .addComponent(vitalTitleLabel)
+                .addGap(26, 26, 26)
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cvsLabel)
+                    .addComponent(cvsInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rsLabel)
+                    .addComponent(rsInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cnsInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cnsLabel))
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pePanelLayout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(paInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pePanelLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(invgLabel)))
+                .addGap(7, 7, 7)
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PAInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(paLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(miasmInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(miasmLabel))
+                .addContainerGap(265, Short.MAX_VALUE))
+        );
+
+        jScrollPane1.setViewportView(pePanel);
+
+        jTabbedPane1.addTab("Physical Examination", jScrollPane1);
+
         saveButton.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
         saveButton.setText("Save");
+        saveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -741,6 +781,16 @@ public class Visits extends javax.swing.JFrame {
   
     }//GEN-LAST:event_fileChooserActionPerformed
 
+    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+        // TODO add your handling code here:
+        
+        InsertVisitDetail visitdets = new InsertVisitDetail(pat_id,chiefComplaintInput.getText(), originInput.getText(), durationInput.getText(), progressInput.getText(),habitInput.getText(),appetiteInput.getText(),thirstInput.getText(),likeComboBox.getSelectedItem().toString(),aversionInput.getText(),stoolInput.getText(),urineComboBox.getSelectedItem().toString(),perspirationInput.getText(),sleepInput.getText(),dreamsInput.getText(),thermallyInput1.getText(),gynacHistoryInput.getText(),mindInput.getText(),temperatureInput.getText(),pulseInput.getText(),bpInput.getText(),respiratoryRateInput.getText(),otherInput.getText(),cvsInput.getText(),rsInput.getText(),cnsInput.getText(),PAInput.getText(), invgInput.getText(),miasmInput.getText(),susceptibilityInput.getText(),finalDiagnosisInput.getText(),probableRemediesInput.getText());
+    }//GEN-LAST:event_saveButtonActionPerformed
+
+    private void bpInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bpInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bpInputActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -773,7 +823,7 @@ public class Visits extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Visits().setVisible(true);
+                //new Visits().setVisible(true);
             }
         });
     }
@@ -782,10 +832,13 @@ public class Visits extends javax.swing.JFrame {
     String patientID = "123123";
     String visitID = "CXZ";
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField PAInput;
     private javax.swing.JTextArea appetiteInput;
     private javax.swing.JLabel appetiteLabel;
     private javax.swing.JTextArea aversionInput;
     private javax.swing.JLabel aversionLabel;
+    private javax.swing.JTextField bpInput;
+    private javax.swing.JLabel bpLabel;
     private javax.swing.JTextArea chiefComplaintInput;
     private javax.swing.JLabel chiefComplaintLabel;
     private javax.swing.JTextField cnsInput;
@@ -807,7 +860,7 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JLabel gynacHistoryLabel1;
     private javax.swing.JTextArea habitInput;
     private javax.swing.JLabel habitLabel;
-    private javax.swing.JTextField invgInput;
+    private javax.swing.JTextArea invgInput;
     private javax.swing.JLabel invgLabel;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
@@ -844,7 +897,6 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JTextArea otherInput;
     private javax.swing.JScrollPane othersInput;
     private javax.swing.JLabel othersLabel;
-    private javax.swing.JTextArea pAInput;
     private javax.swing.JScrollPane paInput;
     private javax.swing.JLabel paLabel;
     private javax.swing.JPanel pePanel;

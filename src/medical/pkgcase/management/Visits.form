@@ -674,266 +674,6 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Physical Examination">
-                <Property name="tabTitle" type="java.lang.String" value="Physical Examination"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="pePanel">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Physical Examination"/>
-                  </Border>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="generalTitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="vitalTitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="temperatureLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="pulseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="respiratoryRateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="othersLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="rsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="cvsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="cnsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="paLabel" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                                              <Component id="invgLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="miasmLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="othersInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="respiratoryRateInput" alignment="0" pref="82" max="32767" attributes="0"/>
-                                          <Component id="pulseInput" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="temperatureInput" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="rsInput" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="cvsInput" alignment="0" pref="82" max="32767" attributes="0"/>
-                                          <Component id="cnsInput" alignment="1" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="paInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="miasmInput" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="invgInput" alignment="0" pref="82" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="222" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="generalTitleLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="temperatureLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="temperatureInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="pulseInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="pulseLabel" alignment="0" min="-2" pref="17" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="respiratoryRateInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="respiratoryRateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="othersInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="othersLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                          <Component id="vitalTitleLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="cvsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cvsInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="rsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="rsInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="cnsInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="cnsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="paInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="paLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="invgLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="invgInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="miasmLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="miasmInput" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="288" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JLabel" name="generalTitleLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="General -"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="temperatureLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Temperature"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="pulseInput">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pulseInputActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JLabel" name="pulseLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Pulse"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="temperatureInput">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="temperatureInputActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="respiratoryRateInput">
-                </Component>
-                <Component class="javax.swing.JLabel" name="respiratoryRateLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Respiratory Rate"/>
-                  </Properties>
-                </Component>
-                <Container class="javax.swing.JScrollPane" name="othersInput">
-                  <AuxValues>
-                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                  </AuxValues>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                  <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="otherInput">
-                      <Properties>
-                        <Property name="columns" type="int" value="20"/>
-                        <Property name="lineWrap" type="boolean" value="true"/>
-                        <Property name="rows" type="int" value="5"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Component class="javax.swing.JLabel" name="othersLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Others"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="vitalTitleLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Systemic with vital data - "/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="cvsLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="CVS"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="cvsInput">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cvsInputActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JLabel" name="rsLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="RS"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="rsInput">
-                </Component>
-                <Component class="javax.swing.JLabel" name="cnsLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="CNS"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="cnsInput">
-                </Component>
-                <Component class="javax.swing.JLabel" name="paLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="P/A"/>
-                  </Properties>
-                </Component>
-                <Container class="javax.swing.JScrollPane" name="paInput">
-                  <AuxValues>
-                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                  </AuxValues>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                  <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="pAInput">
-                      <Properties>
-                        <Property name="columns" type="int" value="20"/>
-                        <Property name="lineWrap" type="boolean" value="true"/>
-                        <Property name="rows" type="int" value="5"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Component class="javax.swing.JLabel" name="invgLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="INVG Assigned"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="invgInput">
-                </Component>
-                <Component class="javax.swing.JLabel" name="miasmLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Miasm"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="miasmInput">
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -1079,6 +819,313 @@
             </Constraint>
           </Constraints>
         </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Physical Examination">
+                <Property name="tabTitle" type="java.lang.String" value="Physical Examination"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="pePanel">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Physical Examination"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="generalTitleLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="temperatureLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="pulseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="pulseInput" alignment="0" pref="82" max="32767" attributes="0"/>
+                                              <Component id="temperatureInput" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="respiratoryRateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="othersLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="bpLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="respiratoryRateInput" alignment="0" max="32767" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="othersInput" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="bpInput" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="vitalTitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="rsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cvsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cnsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="paLabel" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                      <Component id="miasmLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="invgLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="rsInput" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="cvsInput" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="cnsInput" alignment="1" min="-2" pref="82" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="paInput" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="miasmInput" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="PAInput" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="generalTitleLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="temperatureLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="temperatureInput" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="pulseInput" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="pulseLabel" alignment="0" min="-2" pref="17" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="bpLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="bpInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="respiratoryRateInput" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="respiratoryRateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="othersInput" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="othersLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="vitalTitleLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cvsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cvsInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rsInput" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cnsInput" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cnsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                  <Component id="paInput" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                  <Component id="invgLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="PAInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="paLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="miasmInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="miasmLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="265" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="generalTitleLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="General -"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="temperatureLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Temperature"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="pulseInput">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pulseInputActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="pulseLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Pulse"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="temperatureInput">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="temperatureInputActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="respiratoryRateInput">
+                </Component>
+                <Component class="javax.swing.JLabel" name="respiratoryRateLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Respiratory Rate"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="othersInput">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="otherInput">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="lineWrap" type="boolean" value="true"/>
+                        <Property name="rows" type="int" value="5"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="othersLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Others"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="vitalTitleLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Systemic with vital data - "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="cvsLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="CVS"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="cvsInput">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cvsInputActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rsLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="RS"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="rsInput">
+                </Component>
+                <Component class="javax.swing.JLabel" name="cnsLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="CNS"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="cnsInput">
+                </Component>
+                <Component class="javax.swing.JLabel" name="paLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="P/A"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="paInput">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="invgInput">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="lineWrap" type="boolean" value="true"/>
+                        <Property name="rows" type="int" value="5"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="invgLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="INVG Assigned"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="PAInput">
+                </Component>
+                <Component class="javax.swing.JLabel" name="miasmLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Miasm"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="miasmInput">
+                </Component>
+                <Component class="javax.swing.JLabel" name="bpLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Blood Pressure"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="bpInput">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bpInputActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
     <Component class="javax.swing.JButton" name="saveButton">
@@ -1088,6 +1135,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Save"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
