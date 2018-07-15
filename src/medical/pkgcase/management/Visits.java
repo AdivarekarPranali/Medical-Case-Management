@@ -26,15 +26,6 @@ public class Visits extends javax.swing.JFrame {
         initComponents();
         this.pat_id = pat_id;
         String visitID = "";
-                fileChooser.setAcceptAllFileFilterUsed(false);
-        FileNameExtensionFilter jpgfilter = new FileNameExtensionFilter("JPEG Files", "jpg");
-        FileNameExtensionFilter pngfilter = new FileNameExtensionFilter("PNG Files", "png");
-               
-
-
-        fileChooser.addChoosableFileFilter(jpgfilter);
-                fileChooser.addChoosableFileFilter(pngfilter);
-
                 setVisible(true);
 
     }
@@ -72,13 +63,7 @@ public class Visits extends javax.swing.JFrame {
         thirstLabel = new javax.swing.JLabel();
         likeLabel = new javax.swing.JLabel();
         aversionLabel = new javax.swing.JLabel();
-        jScrollPane21 = new javax.swing.JScrollPane();
-        aversionInput = new javax.swing.JTextArea();
         stoolLabel = new javax.swing.JLabel();
-        jScrollPane22 = new javax.swing.JScrollPane();
-        stoolInput = new javax.swing.JTextArea();
-        jScrollPane24 = new javax.swing.JScrollPane();
-        appetiteInput = new javax.swing.JTextArea();
         urineLabel = new javax.swing.JLabel();
         perspirationLabel = new javax.swing.JLabel();
         sleepLabel = new javax.swing.JLabel();
@@ -86,36 +71,30 @@ public class Visits extends javax.swing.JFrame {
         thermallyLabel = new javax.swing.JLabel();
         gynacHistoryLabel1 = new javax.swing.JLabel();
         mindLabel1 = new javax.swing.JLabel();
-        jScrollPane25 = new javax.swing.JScrollPane();
-        perspirationInput = new javax.swing.JTextArea();
-        jScrollPane26 = new javax.swing.JScrollPane();
-        sleepInput = new javax.swing.JTextArea();
         jScrollPane27 = new javax.swing.JScrollPane();
-        dreamsInput = new javax.swing.JTextArea();
+        thermalInput = new javax.swing.JTextArea();
         jScrollPane28 = new javax.swing.JScrollPane();
-        thermallyInput1 = new javax.swing.JTextArea();
-        jScrollPane29 = new javax.swing.JScrollPane();
         gynacHistoryInput = new javax.swing.JTextArea();
-        jScrollPane30 = new javax.swing.JScrollPane();
+        jScrollPane29 = new javax.swing.JScrollPane();
         mindInput = new javax.swing.JTextArea();
         likeComboBox = new javax.swing.JComboBox<>();
         urineComboBox = new javax.swing.JComboBox<>();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        thirstInput = new javax.swing.JTextArea();
         extraLikesInput = new javax.swing.JTextField();
         extraUrineInput = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        diagPanel = new javax.swing.JPanel();
-        susceptibilityLabel = new javax.swing.JLabel();
-        susceptibulityInput = new javax.swing.JScrollPane();
-        susceptibilityInput = new javax.swing.JTextArea();
-        finalDiagnosisLabel = new javax.swing.JLabel();
-        jScrollPane = new javax.swing.JScrollPane();
-        finalDiagnosisInput = new javax.swing.JTextArea();
-        probableRemediesLabel = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        probableRemediesInput = new javax.swing.JTextArea();
-        fileChooser = new javax.swing.JFileChooser();
+        appetiteComboBox = new javax.swing.JComboBox<>();
+        thirstComboBox = new javax.swing.JComboBox<>();
+        stoolComboBox = new javax.swing.JComboBox<>();
+        aversionComboBox = new javax.swing.JComboBox<>();
+        extraAppetiteInput = new javax.swing.JTextField();
+        extraThirstInput = new javax.swing.JTextField();
+        extraAversionInput = new javax.swing.JTextField();
+        extraStoolInput = new javax.swing.JTextField();
+        sleepComboBox = new javax.swing.JComboBox<>();
+        dreamsComboBox = new javax.swing.JComboBox<>();
+        perspirationComboBox = new javax.swing.JComboBox<>();
+        extraPerspirationInput = new javax.swing.JTextField();
+        sleepInput = new javax.swing.JTextField();
+        extraDreamsInput = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         pePanel = new javax.swing.JPanel();
         generalTitleLabel = new javax.swing.JLabel();
@@ -144,6 +123,17 @@ public class Visits extends javax.swing.JFrame {
         miasmInput = new javax.swing.JTextField();
         bpLabel = new javax.swing.JLabel();
         bpInput = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        diagPanel = new javax.swing.JPanel();
+        susceptibilityLabel = new javax.swing.JLabel();
+        susceptibulityInput = new javax.swing.JScrollPane();
+        susceptibilityInput = new javax.swing.JTextArea();
+        finalDiagnosisLabel = new javax.swing.JLabel();
+        jScrollPane = new javax.swing.JScrollPane();
+        finalDiagnosisInput = new javax.swing.JTextArea();
+        probableRemediesLabel = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        probableRemediesInput = new javax.swing.JTextArea();
         saveButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -245,7 +235,7 @@ public class Visits extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane36, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(habitLabel))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
 
         jScrollPane31.setViewportView(jPanel13);
@@ -262,22 +252,7 @@ public class Visits extends javax.swing.JFrame {
 
         aversionLabel.setText("Aversion");
 
-        aversionInput.setColumns(20);
-        aversionInput.setLineWrap(true);
-        aversionInput.setRows(5);
-        jScrollPane21.setViewportView(aversionInput);
-
         stoolLabel.setText("Stool");
-
-        stoolInput.setColumns(20);
-        stoolInput.setLineWrap(true);
-        stoolInput.setRows(5);
-        jScrollPane22.setViewportView(stoolInput);
-
-        appetiteInput.setColumns(20);
-        appetiteInput.setLineWrap(true);
-        appetiteInput.setRows(5);
-        jScrollPane24.setViewportView(appetiteInput);
 
         urineLabel.setText("Urine");
 
@@ -293,43 +268,57 @@ public class Visits extends javax.swing.JFrame {
 
         mindLabel1.setText("Mind");
 
-        perspirationInput.setColumns(20);
-        perspirationInput.setLineWrap(true);
-        perspirationInput.setRows(5);
-        jScrollPane25.setViewportView(perspirationInput);
-
-        sleepInput.setColumns(20);
-        sleepInput.setLineWrap(true);
-        sleepInput.setRows(5);
-        jScrollPane26.setViewportView(sleepInput);
-
-        dreamsInput.setColumns(20);
-        dreamsInput.setLineWrap(true);
-        dreamsInput.setRows(5);
-        jScrollPane27.setViewportView(dreamsInput);
-
-        thermallyInput1.setColumns(20);
-        thermallyInput1.setLineWrap(true);
-        thermallyInput1.setRows(5);
-        jScrollPane28.setViewportView(thermallyInput1);
+        thermalInput.setColumns(20);
+        thermalInput.setLineWrap(true);
+        thermalInput.setRows(5);
+        jScrollPane27.setViewportView(thermalInput);
 
         gynacHistoryInput.setColumns(20);
         gynacHistoryInput.setLineWrap(true);
         gynacHistoryInput.setRows(5);
-        jScrollPane29.setViewportView(gynacHistoryInput);
+        jScrollPane28.setViewportView(gynacHistoryInput);
 
         mindInput.setColumns(20);
         mindInput.setLineWrap(true);
         mindInput.setRows(5);
-        jScrollPane30.setViewportView(mindInput);
+        jScrollPane29.setViewportView(mindInput);
 
         likeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sweet", "Salty", "Sour", "Bitter", "Spicy" }));
 
-        urineComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Excessive", "Higher than normal", "Normal", "Slightly less than normal", "Dangerously low" }));
+        urineComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
+        urineComboBox.setSelectedIndex(1);
 
-        thirstInput.setColumns(20);
-        thirstInput.setRows(5);
-        jScrollPane4.setViewportView(thirstInput);
+        extraUrineInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                extraUrineInputActionPerformed(evt);
+            }
+        });
+
+        appetiteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low", "" }));
+        appetiteComboBox.setSelectedIndex(1);
+
+        thirstComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
+        thirstComboBox.setSelectedIndex(1);
+
+        stoolComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
+        stoolComboBox.setSelectedIndex(1);
+
+        aversionComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
+        aversionComboBox.setSelectedIndex(1);
+
+        sleepComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
+        sleepComboBox.setSelectedIndex(1);
+        sleepComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sleepComboBoxActionPerformed(evt);
+            }
+        });
+
+        dreamsComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
+        dreamsComboBox.setSelectedIndex(1);
+
+        perspirationComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
+        perspirationComboBox.setSelectedIndex(1);
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -352,170 +341,123 @@ public class Visits extends javax.swing.JFrame {
                     .addComponent(perspirationLabel))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane21)
-                    .addComponent(jScrollPane22)
-                    .addComponent(jScrollPane24)
-                    .addComponent(jScrollPane25)
-                    .addComponent(jScrollPane26)
-                    .addComponent(jScrollPane27)
+                    .addComponent(jScrollPane27, javax.swing.GroupLayout.DEFAULT_SIZE, 391, Short.MAX_VALUE)
                     .addComponent(jScrollPane28)
                     .addComponent(jScrollPane29)
-                    .addComponent(jScrollPane30)
-                    .addComponent(jScrollPane4)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addComponent(likeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(aversionComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(thirstComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(appetiteComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(likeComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 131, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
-                                .addComponent(extraLikesInput, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(extraLikesInput, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                                    .addComponent(extraAppetiteInput)
+                                    .addComponent(extraThirstInput)
+                                    .addComponent(extraAversionInput)))
                             .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addComponent(urineComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(stoolComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(urineComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(sleepComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(perspirationComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(extraUrineInput, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(extraUrineInput, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                                    .addComponent(extraStoolInput)
+                                    .addComponent(extraPerspirationInput)
+                                    .addComponent(sleepInput)))
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addComponent(dreamsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(extraDreamsInput)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(17, 17, 17)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(appetiteLabel)
+                    .addComponent(appetiteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(extraAppetiteInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                        .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(thirstLabel)
+                            .addComponent(thirstComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(extraThirstInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(likeLabel)
                             .addComponent(likeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(extraLikesInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(aversionLabel)
+                            .addComponent(aversionComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(extraAversionInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(stoolLabel)
+                            .addComponent(stoolComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(extraStoolInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addComponent(urineLabel)
+                        .addGap(30, 30, 30))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(urineComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(extraUrineInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                        .addComponent(appetiteLabel)
-                        .addGap(37, 37, 37)
-                        .addComponent(thirstLabel)
-                        .addGap(36, 36, 36)
-                        .addComponent(likeLabel)
-                        .addGap(37, 37, 37)
-                        .addComponent(aversionLabel)
-                        .addGap(38, 38, 38)
-                        .addComponent(stoolLabel)
-                        .addGap(37, 37, 37)
-                        .addComponent(urineLabel)
-                        .addGap(30, 30, 30)))
+                        .addGap(22, 22, 22)))
+                .addGap(3, 3, 3)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(perspirationLabel)
+                            .addComponent(perspirationComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(extraPerspirationInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addComponent(sleepLabel))
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(sleepComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sleepInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(perspirationLabel)
                         .addGap(37, 37, 37)
-                        .addComponent(sleepLabel)
-                        .addGap(37, 37, 37)
-                        .addComponent(dreamsLabel))
+                        .addComponent(dreamsLabel)
+                        .addGap(26, 26, 26)
+                        .addComponent(thermallyLabel))
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(jScrollPane25, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane26, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dreamsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(extraDreamsInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane27, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(4, 4, 4)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(thermallyLabel)
-                        .addGap(38, 38, 38)
+                        .addGap(16, 16, 16)
                         .addComponent(gynacHistoryLabel1)
-                        .addGap(38, 38, 38)
+                        .addGap(42, 42, 42)
                         .addComponent(mindLabel1))
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
+                        .addGap(7, 7, 7)
                         .addComponent(jScrollPane28, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane29, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane30, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane29, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         jScrollPane18.setViewportView(jPanel12);
 
         jTabbedPane1.addTab("Physical Details", jScrollPane18);
-
-        diagPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Diagnosis/Remedies"));
-
-        susceptibilityLabel.setText("Susceptibility");
-
-        susceptibilityInput.setColumns(20);
-        susceptibilityInput.setLineWrap(true);
-        susceptibilityInput.setRows(5);
-        susceptibulityInput.setViewportView(susceptibilityInput);
-
-        finalDiagnosisLabel.setText("Final Diagnosis");
-
-        finalDiagnosisInput.setColumns(20);
-        finalDiagnosisInput.setLineWrap(true);
-        finalDiagnosisInput.setRows(5);
-        jScrollPane.setViewportView(finalDiagnosisInput);
-
-        probableRemediesLabel.setText("Probable Remedies");
-
-        probableRemediesInput.setColumns(20);
-        probableRemediesInput.setLineWrap(true);
-        probableRemediesInput.setRows(5);
-        jScrollPane3.setViewportView(probableRemediesInput);
-
-        javax.swing.GroupLayout diagPanelLayout = new javax.swing.GroupLayout(diagPanel);
-        diagPanel.setLayout(diagPanelLayout);
-        diagPanelLayout.setHorizontalGroup(
-            diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(diagPanelLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(susceptibilityLabel)
-                        .addComponent(finalDiagnosisLabel))
-                    .addComponent(probableRemediesLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(susceptibulityInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(269, Short.MAX_VALUE))
-        );
-        diagPanelLayout.setVerticalGroup(
-            diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(diagPanelLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(susceptibulityInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(susceptibilityLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(finalDiagnosisLabel))
-                .addGap(9, 9, 9)
-                .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(probableRemediesLabel)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(504, Short.MAX_VALUE))
-        );
-
-        jScrollPane2.setViewportView(diagPanel);
-
-        jTabbedPane1.addTab("Diagnosis/Remedies", jScrollPane2);
-
-        fileChooser.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fileChooserActionPerformed(evt);
-            }
-        });
-        jTabbedPane1.addTab("Save Diagnosis", fileChooser);
 
         pePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Physical Examination"));
 
@@ -701,6 +643,69 @@ public class Visits extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Physical Examination", jScrollPane1);
 
+        diagPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Diagnosis/Remedies"));
+
+        susceptibilityLabel.setText("Susceptibility");
+
+        susceptibilityInput.setColumns(20);
+        susceptibilityInput.setLineWrap(true);
+        susceptibilityInput.setRows(5);
+        susceptibulityInput.setViewportView(susceptibilityInput);
+
+        finalDiagnosisLabel.setText("Final Diagnosis");
+
+        finalDiagnosisInput.setColumns(20);
+        finalDiagnosisInput.setLineWrap(true);
+        finalDiagnosisInput.setRows(5);
+        jScrollPane.setViewportView(finalDiagnosisInput);
+
+        probableRemediesLabel.setText("Probable Remedies");
+
+        probableRemediesInput.setColumns(20);
+        probableRemediesInput.setLineWrap(true);
+        probableRemediesInput.setRows(5);
+        jScrollPane3.setViewportView(probableRemediesInput);
+
+        javax.swing.GroupLayout diagPanelLayout = new javax.swing.GroupLayout(diagPanel);
+        diagPanel.setLayout(diagPanelLayout);
+        diagPanelLayout.setHorizontalGroup(
+            diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(diagPanelLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(susceptibilityLabel)
+                        .addComponent(finalDiagnosisLabel))
+                    .addComponent(probableRemediesLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(susceptibulityInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(269, Short.MAX_VALUE))
+        );
+        diagPanelLayout.setVerticalGroup(
+            diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(diagPanelLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(susceptibulityInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(susceptibilityLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(finalDiagnosisLabel))
+                .addGap(9, 9, 9)
+                .addGroup(diagPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(probableRemediesLabel)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(504, Short.MAX_VALUE))
+        );
+
+        jScrollPane2.setViewportView(diagPanel);
+
+        jTabbedPane1.addTab("Diagnosis/Remedies", jScrollPane2);
+
         saveButton.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
         saveButton.setText("Save");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
@@ -713,19 +718,19 @@ public class Visits extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(230, 230, 230))
+                .addGap(238, 238, 238))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(saveButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
 
         pack();
@@ -743,53 +748,24 @@ public class Visits extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cvsInputActionPerformed
 
-    private void fileChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileChooserActionPerformed
-        // TODO add your handling code here:
-  if (evt.getActionCommand().equals(javax.swing.JFileChooser.APPROVE_SELECTION)) {
-        File theDir = new File("Diagnosis Storage Folder/"+File.separator+patientID+File.separator+visitID);
-        //File visitDir = new File(theDir + "/" + visitID);// Defining Directory/Folder Name  
-    try{   
-        if (!theDir.exists()){  // Checks that Directory/Folder Doesn't Exists!  
-         boolean result = theDir.mkdirs();    
-        }  
-    }catch(Exception e){  
-        JOptionPane.showMessageDialog(null, e);  
-    }  
-         counter++;        
-       
-         
-         
-         JOptionPane.showMessageDialog(null, "File number " + counter + " saved");
-         String path = fileChooser.getSelectedFile().getAbsolutePath();
-         JOptionPane.showMessageDialog(null, path);
-         
-         File src = new File(path);
-        File target = new File(theDir.getAbsolutePath()+File.separator+counter);
-
-        try
-        {
-        Files.copy(src.toPath(), target.toPath(), StandardCopyOption.REPLACE_EXISTING);
-        }
-        catch(Exception e)
-        {}
-                 
-
-        
-    } else if (evt.getActionCommand().equals(javax.swing.JFileChooser.CANCEL_SELECTION)) {
-    }
-    
-  
-    }//GEN-LAST:event_fileChooserActionPerformed
-
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         // TODO add your handling code here:
         
-        InsertVisitDetail visitdets = new InsertVisitDetail(pat_id,chiefComplaintInput.getText(), originInput.getText(), durationInput.getText(), progressInput.getText(),habitInput.getText(),appetiteInput.getText(),thirstInput.getText(),likeComboBox.getSelectedItem().toString(),aversionInput.getText(),stoolInput.getText(),urineComboBox.getSelectedItem().toString(),perspirationInput.getText(),sleepInput.getText(),dreamsInput.getText(),thermallyInput1.getText(),gynacHistoryInput.getText(),mindInput.getText(),temperatureInput.getText(),pulseInput.getText(),bpInput.getText(),respiratoryRateInput.getText(),otherInput.getText(),cvsInput.getText(),rsInput.getText(),cnsInput.getText(),PAInput.getText(), invgInput.getText(),miasmInput.getText(),susceptibilityInput.getText(),finalDiagnosisInput.getText(),probableRemediesInput.getText());
+        InsertVisitDetail visitdets = new InsertVisitDetail(pat_id,chiefComplaintInput.getText(), originInput.getText(), durationInput.getText(), progressInput.getText(),habitInput.getText(),appetiteComboBox.getSelectedItem().toString() +" " +extraAppetiteInput.getText(),thirstComboBox.getSelectedItem().toString() + " " + extraThirstInput.getText(),likeComboBox.getSelectedItem().toString() + " "+ extraLikesInput.getText() ,aversionComboBox.getSelectedItem().toString() +" " +extraAversionInput.getText(),stoolComboBox.getSelectedItem().toString() + " " +extraStoolInput.getText(),urineComboBox.getSelectedItem().toString() + " " + extraUrineInput.getText(),perspirationComboBox.getSelectedItem().toString()+" " + extraPerspirationInput.getText(),sleepComboBox.getSelectedItem().toString() + " " +sleepInput.getText(), dreamsComboBox.getSelectedItem().toString() + " " + extraDreamsInput.getText(),thermalInput.getText(),gynacHistoryInput.getText(),mindInput.getText(),temperatureInput.getText(),pulseInput.getText(),bpInput.getText(),respiratoryRateInput.getText(),otherInput.getText(),cvsInput.getText(),rsInput.getText(),cnsInput.getText(),PAInput.getText(), invgInput.getText(),miasmInput.getText(),susceptibilityInput.getText(),finalDiagnosisInput.getText(),probableRemediesInput.getText());
+        this.dispose();
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void bpInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bpInputActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bpInputActionPerformed
+
+    private void extraUrineInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_extraUrineInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_extraUrineInputActionPerformed
+
+    private void sleepComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sleepComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sleepComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -829,13 +805,13 @@ public class Visits extends javax.swing.JFrame {
     }
 
     public int counter = 0;
-    String patientID = "123123";
-    String visitID = "CXZ";
+    String patientID = "";
+    String visitID = "";
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField PAInput;
-    private javax.swing.JTextArea appetiteInput;
+    private javax.swing.JComboBox<String> appetiteComboBox;
     private javax.swing.JLabel appetiteLabel;
-    private javax.swing.JTextArea aversionInput;
+    private javax.swing.JComboBox<String> aversionComboBox;
     private javax.swing.JLabel aversionLabel;
     private javax.swing.JTextField bpInput;
     private javax.swing.JLabel bpLabel;
@@ -846,13 +822,18 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JTextField cvsInput;
     private javax.swing.JLabel cvsLabel;
     private javax.swing.JPanel diagPanel;
-    private javax.swing.JTextArea dreamsInput;
+    private javax.swing.JComboBox<String> dreamsComboBox;
     private javax.swing.JLabel dreamsLabel;
     private javax.swing.JTextArea durationInput;
     private javax.swing.JLabel durationLabel;
+    private javax.swing.JTextField extraAppetiteInput;
+    private javax.swing.JTextField extraAversionInput;
+    private javax.swing.JTextField extraDreamsInput;
     private javax.swing.JTextField extraLikesInput;
+    private javax.swing.JTextField extraPerspirationInput;
+    private javax.swing.JTextField extraStoolInput;
+    private javax.swing.JTextField extraThirstInput;
     private javax.swing.JTextField extraUrineInput;
-    private javax.swing.JFileChooser fileChooser;
     private javax.swing.JTextArea finalDiagnosisInput;
     private javax.swing.JLabel finalDiagnosisLabel;
     private javax.swing.JLabel generalTitleLabel;
@@ -868,23 +849,16 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane18;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane21;
-    private javax.swing.JScrollPane jScrollPane22;
-    private javax.swing.JScrollPane jScrollPane24;
-    private javax.swing.JScrollPane jScrollPane25;
-    private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane27;
     private javax.swing.JScrollPane jScrollPane28;
     private javax.swing.JScrollPane jScrollPane29;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane30;
     private javax.swing.JScrollPane jScrollPane31;
     private javax.swing.JScrollPane jScrollPane32;
     private javax.swing.JScrollPane jScrollPane33;
     private javax.swing.JScrollPane jScrollPane34;
     private javax.swing.JScrollPane jScrollPane35;
     private javax.swing.JScrollPane jScrollPane36;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JComboBox<String> likeComboBox;
     private javax.swing.JLabel likeLabel;
@@ -900,7 +874,7 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JScrollPane paInput;
     private javax.swing.JLabel paLabel;
     private javax.swing.JPanel pePanel;
-    private javax.swing.JTextArea perspirationInput;
+    private javax.swing.JComboBox<String> perspirationComboBox;
     private javax.swing.JLabel perspirationLabel;
     private javax.swing.JTextArea probableRemediesInput;
     private javax.swing.JLabel probableRemediesLabel;
@@ -913,18 +887,19 @@ public class Visits extends javax.swing.JFrame {
     private javax.swing.JTextField rsInput;
     private javax.swing.JLabel rsLabel;
     private javax.swing.JButton saveButton;
-    private javax.swing.JTextArea sleepInput;
+    private javax.swing.JComboBox<String> sleepComboBox;
+    private javax.swing.JTextField sleepInput;
     private javax.swing.JLabel sleepLabel;
-    private javax.swing.JTextArea stoolInput;
+    private javax.swing.JComboBox<String> stoolComboBox;
     private javax.swing.JLabel stoolLabel;
     private javax.swing.JTextArea susceptibilityInput;
     private javax.swing.JLabel susceptibilityLabel;
     private javax.swing.JScrollPane susceptibulityInput;
     private javax.swing.JTextField temperatureInput;
     private javax.swing.JLabel temperatureLabel;
-    private javax.swing.JTextArea thermallyInput1;
+    private javax.swing.JTextArea thermalInput;
     private javax.swing.JLabel thermallyLabel;
-    private javax.swing.JTextArea thirstInput;
+    private javax.swing.JComboBox<String> thirstComboBox;
     private javax.swing.JLabel thirstLabel;
     private javax.swing.JComboBox<String> urineComboBox;
     private javax.swing.JLabel urineLabel;

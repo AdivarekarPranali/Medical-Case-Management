@@ -272,6 +272,7 @@ public class Search extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row = patientListTable.getSelectedRow();
         VisitList vl = new VisitList(patientDetails.get(row).getId(),patientDetails.get(row).getName(),patientDetails.get(row).getPH());
+        this.dispose();
     }//GEN-LAST:event_patientListTableMouseClicked
 
     /**

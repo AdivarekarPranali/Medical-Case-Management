@@ -324,8 +324,7 @@ public class RegisterNewPatient extends javax.swing.JFrame {
 
         InsertPatientDetails ins = new InsertPatientDetails(name,address, dob, blood, email, phone, pastMedical, occupation, marital,gender);
         
-        
-        
+        this.dispose();
 
     }//GEN-LAST:event_registerButtonActionPerformed
 
