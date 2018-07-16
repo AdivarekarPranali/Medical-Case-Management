@@ -5,6 +5,8 @@
  */
 package medical.pkgcase.management;
 
+import java.awt.event.KeyEvent;
+
 /**
  *
  * @author pranali
@@ -75,6 +77,18 @@ public class RegisterNewPatient extends javax.swing.JFrame {
 
         lastNameLabel.setText("Last Name:");
 
+        firstNameInput.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                firstNameInputKeyTyped(evt);
+            }
+        });
+
+        lastNameInput.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                lastNameInputKeyTyped(evt);
+            }
+        });
+
         genderLabel.setText("Gender");
 
         genderGroup.add(maleButton);
@@ -97,6 +111,17 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         singleButton.setText("Single");
 
         phoneLabel.setText("Phone");
+
+        phoneInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                phoneInputActionPerformed(evt);
+            }
+        });
+        phoneInput.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                phoneInputKeyTyped(evt);
+            }
+        });
 
         dobLabel.setText("DOB(DD/MM/YYYY)");
 
@@ -139,7 +164,30 @@ public class RegisterNewPatient extends javax.swing.JFrame {
             }
         });
 
+        dateInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateInputActionPerformed(evt);
+            }
+        });
+        dateInput.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dateInputKeyTyped(evt);
+            }
+        });
+
         dateSeperatorLabel1.setText("//");
+
+        monthInput.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                monthInputKeyTyped(evt);
+            }
+        });
+
+        yearInput.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                yearInputKeyTyped(evt);
+            }
+        });
 
         dateSeperatorLabel2.setText("//");
 
@@ -327,6 +375,61 @@ public class RegisterNewPatient extends javax.swing.JFrame {
         this.dispose();
 
     }//GEN-LAST:event_registerButtonActionPerformed
+
+    private void firstNameInputKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_firstNameInputKeyTyped
+        // TODO add your handling code here:
+                char c=evt.getKeyChar();
+
+    if(!(Character.isAlphabetic(c) ||  (c==KeyEvent.VK_BACK_SPACE)||  c==KeyEvent.VK_DELETE ))
+        evt.consume();
+
+    }//GEN-LAST:event_firstNameInputKeyTyped
+
+    private void lastNameInputKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lastNameInputKeyTyped
+                char c=evt.getKeyChar();
+
+    if(!(Character.isAlphabetic(c) ||  (c==KeyEvent.VK_BACK_SPACE)||  c==KeyEvent.VK_DELETE ))
+        evt.consume();        // TODO add your handling code here:
+    }//GEN-LAST:event_lastNameInputKeyTyped
+
+    private void phoneInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_phoneInputActionPerformed
+
+    private void phoneInputKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_phoneInputKeyTyped
+                char c=evt.getKeyChar();
+
+    if(!(Character.isDigit(c) ||  (c==KeyEvent.VK_BACK_SPACE)||  c==KeyEvent.VK_DELETE ))
+        evt.consume();        // TODO add your handling code here:
+    }//GEN-LAST:event_phoneInputKeyTyped
+
+    private void dateInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateInputActionPerformed
+
+    private void dateInputKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dateInputKeyTyped
+                char c=evt.getKeyChar();
+
+    if(!(Character.isDigit(c) ||  (c==KeyEvent.VK_BACK_SPACE)||  c==KeyEvent.VK_DELETE ))
+        evt.consume();        // TODO add your handling code here:
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateInputKeyTyped
+
+    private void monthInputKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_monthInputKeyTyped
+                char c=evt.getKeyChar();
+
+    if(!(Character.isDigit(c) ||  (c==KeyEvent.VK_BACK_SPACE)||  c==KeyEvent.VK_DELETE ))
+        evt.consume();        // TODO add your handling code here:
+        // TODO add your handling code here:
+    }//GEN-LAST:event_monthInputKeyTyped
+
+    private void yearInputKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_yearInputKeyTyped
+                char c=evt.getKeyChar();
+
+    if(!(Character.isDigit(c) ||  (c==KeyEvent.VK_BACK_SPACE)||  c==KeyEvent.VK_DELETE ))
+        evt.consume();        // TODO add your handling code here:
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yearInputKeyTyped
 
     /**
      * @param args the command line arguments

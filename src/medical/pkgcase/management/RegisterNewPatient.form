@@ -213,8 +213,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="firstNameInput">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="firstNameInputKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="lastNameInput">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lastNameInputKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="genderLabel">
           <Properties>
@@ -264,6 +270,10 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="phoneInput">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="phoneInputActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="phoneInputKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dobLabel">
           <Properties>
@@ -375,6 +385,10 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="dateInput">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dateInputActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="dateInputKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dateSeperatorLabel1">
           <Properties>
@@ -382,8 +396,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="monthInput">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="monthInputKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="yearInput">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="yearInputKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dateSeperatorLabel2">
           <Properties>
