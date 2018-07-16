@@ -208,7 +208,18 @@ public class Search extends javax.swing.JFrame {
         String user = "vjtidev";
         String password = "vjti@123";
         
-        String query = "SELECT UNIX_TIMESTAMP(id) as id,name,dob,phone_num,past_med_history from patient_det where "+searchCriteria+" like ?" ;
+        
+        String query = new String();
+        if(searchCriteria.equals(("Diagnosis")))
+        {
+            query = "select UNIX_TIMESTAMP(patient_det.id) as id,name,dob,phone_num,past_med_history from patient_det,patient_visit_det where patient_det.id = patient_visit_det.patient_id and final_diagnosis like ?";
+        }
+        else
+        {
+         query = "SELECT UNIX_TIMESTAMP(id) as id,name,dob,phone_num,past_med_history from patient_det where "+searchCriteria+" like ?" ;
+        }
+        
+        //String query = "SELECT UNIX_TIMESTAMP(id) as id,name,dob,phone_num,past_med_history from patient_det where "+searchCriteria+" like ?" ;
 
         try {
             Connection con = DriverManager.getConnection(url, user, password);
@@ -272,7 +283,8 @@ public class Search extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row = patientListTable.getSelectedRow();
         VisitList vl = new VisitList(patientDetails.get(row).getId(),patientDetails.get(row).getName(),patientDetails.get(row).getPH());
-        this.dispose();
+        
+        //this.dispose();
     }//GEN-LAST:event_patientListTableMouseClicked
 
     /**
