@@ -303,8 +303,7 @@ public class Visits extends javax.swing.JFrame {
         stoolComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
         stoolComboBox.setSelectedIndex(1);
 
-        aversionComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
-        aversionComboBox.setSelectedIndex(1);
+        aversionComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sweet", "Spicy", "Sour", "Bitter", "Salty" }));
 
         sleepComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
         sleepComboBox.setSelectedIndex(1);

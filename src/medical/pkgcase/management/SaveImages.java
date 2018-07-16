@@ -120,6 +120,7 @@ public class SaveImages extends javax.swing.JFrame {
         catch(Exception e)
         {}
         finally{
+            this.dispose();
         MainWindow mw = new MainWindow();
         }
                  

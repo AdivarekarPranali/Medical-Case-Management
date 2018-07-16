@@ -200,6 +200,7 @@ public class VisitList extends javax.swing.JFrame {
      * Creates new form VisitList
      */
     ArrayList<PatientVisits> patientVisits = new ArrayList();
+    String pat_id;
 
     /**
      * Creates new form VisitList
@@ -210,7 +211,8 @@ public class VisitList extends javax.swing.JFrame {
         String url = "jdbc:mysql://localhost:3306/medical_case_mgmt?autoReconnect=true&useSSL=false";
         String user = "vjtidev";
         String password = "vjti@123";
-        System.out.println("cons");
+        System.out.println(id);
+        pat_id = id;
         
         String query = "SELECT * from patient_visit_det where UNIX_TIMESTAMP(patient_id) = ?" ;
 
@@ -467,11 +469,16 @@ public class VisitList extends javax.swing.JFrame {
             System.out.println("clicked");
             
         }
+                visitTable.getColumnModel().getColumn(col).setCellRenderer(new WordWrapCellRenderer());
+
+        
     }//GEN-LAST:event_visitTableMouseClicked
 
     private void registerNewComplaintButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerNewComplaintButtonActionPerformed
         // TODO add your handling code here:
-        //Visit v = new Visit();
+        
+        Visits v = new Visits(pat_id);
+        this.dispose();
     }//GEN-LAST:event_registerNewComplaintButtonActionPerformed
 
     /**
