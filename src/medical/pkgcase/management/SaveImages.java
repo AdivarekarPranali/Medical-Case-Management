@@ -127,6 +127,10 @@ public class SaveImages extends javax.swing.JFrame {
 
         
     } else if (evt.getActionCommand().equals(javax.swing.JFileChooser.CANCEL_SELECTION)) {
+            this.dispose();
+        MainWindow mw = new MainWindow();
+        
+        
     }
     
         

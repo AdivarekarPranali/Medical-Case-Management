@@ -212,11 +212,11 @@ public class Search extends javax.swing.JFrame {
         String query = new String();
         if(searchCriteria.equals(("Diagnosis")))
         {
-            query = "select UNIX_TIMESTAMP(patient_det.id) as id,name,dob,phone_num,past_med_history from patient_det,patient_visit_det where patient_det.id = patient_visit_det.patient_id and final_diagnosis like ?";
+            query = "select patient_det.id as id,name,dob,phone_num,past_med_history from patient_det,patient_visit_det where patient_det.id = patient_visit_det.patient_id and final_diagnosis like ?";
         }
         else
         {
-         query = "SELECT UNIX_TIMESTAMP(id) as id,name,dob,phone_num,past_med_history from patient_det where "+searchCriteria+" like ?" ;
+         query = "SELECT id,name,dob,phone_num,past_med_history from patient_det where "+searchCriteria+" like ?" ;
         }
         
         //String query = "SELECT UNIX_TIMESTAMP(id) as id,name,dob,phone_num,past_med_history from patient_det where "+searchCriteria+" like ?" ;
