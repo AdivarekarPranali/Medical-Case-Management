@@ -564,12 +564,13 @@
                 <Component class="javax.swing.JComboBox" name="likeComboBox">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="5">
-                        <StringItem index="0" value="Sweet"/>
-                        <StringItem index="1" value="Salty"/>
-                        <StringItem index="2" value="Sour"/>
-                        <StringItem index="3" value="Bitter"/>
-                        <StringItem index="4" value="Spicy"/>
+                      <StringArray count="6">
+                        <StringItem index="0" value="NA"/>
+                        <StringItem index="1" value="Sweet"/>
+                        <StringItem index="2" value="Salty"/>
+                        <StringItem index="3" value="Sour"/>
+                        <StringItem index="4" value="Bitter"/>
+                        <StringItem index="5" value="Spicy"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -648,12 +649,13 @@
                 <Component class="javax.swing.JComboBox" name="aversionComboBox">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="5">
-                        <StringItem index="0" value="Sweet"/>
-                        <StringItem index="1" value="Spicy"/>
-                        <StringItem index="2" value="Sour"/>
-                        <StringItem index="3" value="Bitter"/>
-                        <StringItem index="4" value="Salty"/>
+                      <StringArray count="6">
+                        <StringItem index="0" value="NA"/>
+                        <StringItem index="1" value="Sweet"/>
+                        <StringItem index="2" value="Spicy"/>
+                        <StringItem index="3" value="Sour"/>
+                        <StringItem index="4" value="Bitter"/>
+                        <StringItem index="5" value="Salty"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -690,13 +692,11 @@
                 <Component class="javax.swing.JComboBox" name="dreamsComboBox">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="3">
-                        <StringItem index="0" value="High"/>
-                        <StringItem index="1" value="Normal"/>
-                        <StringItem index="2" value="Low"/>
+                      <StringArray count="2">
+                        <StringItem index="0" value="Yes"/>
+                        <StringItem index="1" value="No"/>
                       </StringArray>
                     </Property>
-                    <Property name="selectedIndex" type="int" value="1"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1144,7 +1144,7 @@
                 </Container>
                 <Component class="javax.swing.JLabel" name="probableRemediesLabel">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Probable Remedies"/>
+                    <Property name="text" type="java.lang.String" value="Final Remedies"/>
                   </Properties>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane3">

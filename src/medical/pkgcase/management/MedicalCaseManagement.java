@@ -17,7 +17,7 @@ public class MedicalCaseManagement {
     public static void main(String[] args) 
     {
         // TODO code application logic here
-        MainWindow mw = new MainWindow();
+        LoginWindow lw = new LoginWindow();
     }
     
 }

@@ -283,7 +283,7 @@ public class Visits extends javax.swing.JFrame {
         mindInput.setRows(5);
         jScrollPane29.setViewportView(mindInput);
 
-        likeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sweet", "Salty", "Sour", "Bitter", "Spicy" }));
+        likeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NA", "Sweet", "Salty", "Sour", "Bitter", "Spicy" }));
 
         urineComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
         urineComboBox.setSelectedIndex(1);
@@ -303,7 +303,7 @@ public class Visits extends javax.swing.JFrame {
         stoolComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
         stoolComboBox.setSelectedIndex(1);
 
-        aversionComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sweet", "Spicy", "Sour", "Bitter", "Salty" }));
+        aversionComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NA", "Sweet", "Spicy", "Sour", "Bitter", "Salty" }));
 
         sleepComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
         sleepComboBox.setSelectedIndex(1);
@@ -313,8 +313,7 @@ public class Visits extends javax.swing.JFrame {
             }
         });
 
-        dreamsComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
-        dreamsComboBox.setSelectedIndex(1);
+        dreamsComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No" }));
 
         perspirationComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "High", "Normal", "Low" }));
         perspirationComboBox.setSelectedIndex(1);
@@ -658,7 +657,7 @@ public class Visits extends javax.swing.JFrame {
         finalDiagnosisInput.setRows(5);
         jScrollPane.setViewportView(finalDiagnosisInput);
 
-        probableRemediesLabel.setText("Probable Remedies");
+        probableRemediesLabel.setText("Final Remedies");
 
         probableRemediesInput.setColumns(20);
         probableRemediesInput.setLineWrap(true);

@@ -134,7 +134,7 @@ public class RegisterNewPatient extends javax.swing.JFrame {
 
         bloodGroupLabel.setText("Blood Group");
 
-        bloodGroupComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
+        bloodGroupComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NA", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
         bloodGroupComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bloodGroupComboBoxActionPerformed(evt);
