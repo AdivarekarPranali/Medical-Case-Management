@@ -194,7 +194,7 @@ public class VisitList extends javax.swing.JFrame {
         System.out.println(id);
         pat_id = id;
         
-        String query = "SELECT * from patient_visit_det where UNIX_TIMESTAMP(patient_id) = ?" ;
+        String query = "SELECT * from patient_visit_det where patient_id = ?" ;
 
         try {
             Connection con = DriverManager.getConnection(url, user, password);
@@ -210,7 +210,6 @@ public class VisitList extends javax.swing.JFrame {
             while(rs.next())
             {
                 System.out.println("in");
-
                 String visitId = rs.getString("id");
 		String chiefComplain = rs.getString("chief_complaint");	
                 String  addiction = rs.getString("addiction");	
@@ -240,9 +239,6 @@ public class VisitList extends javax.swing.JFrame {
                 String  final_diagnosis = rs.getString("final_diagnosis");	
                 String  probable_remedies = rs.getString("probable_remedies");	
                 String link = rs.getString("folder_link");
-               
-        
-		//String ph = rs.getString("past_med_history");
 		System.out.println("id : " + id);
                 PatientVisits p = new PatientVisits(visitId, chiefComplain, addiction,appetite,thirst,desire,aversion,stool,urine,perspiration,sleep,dreams,thermally,gynac_history,mind,temp,pulse,blood_pressure,resp_rate,others,cvs,rs_pat,cns,pa,invg_advised,miasm,final_diagnosis,probable_remedies,link);
                 patientVisits.add(p);
@@ -382,7 +378,6 @@ public class VisitList extends javax.swing.JFrame {
         jScrollPane2.setViewportView(visitTable);
 
         registerNewComplaintButton.setText("Register New Complaint");
-        registerNewComplaintButton.setActionCommand("Register New Complaint");
         registerNewComplaintButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registerNewComplaintButtonActionPerformed(evt);
@@ -410,10 +405,10 @@ public class VisitList extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
                 .addGap(28, 28, 28)
                 .addComponent(registerNewComplaintButton)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addGap(32, 32, 32))
         );
 
         pack();

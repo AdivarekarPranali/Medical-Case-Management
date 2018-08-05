@@ -674,7 +674,7 @@ public class Visits extends javax.swing.JFrame {
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         // TODO add your handling code here:
-        System.out.println("Visits id " +pat_id);
+        System.out.println("Patient id " +pat_id);
         InsertVisitDetail visitdets = new InsertVisitDetail(pat_id,chiefComplaintInput.getText(),habitInput.getText(),appetiteComboBox.getSelectedItem().toString() +" " +extraAppetiteInput.getText(),thirstComboBox.getSelectedItem().toString() + " " + extraThirstInput.getText(),likeComboBox.getSelectedItem().toString() + " "+ extraLikesInput.getText() ,aversionComboBox.getSelectedItem().toString() +" " +extraAversionInput.getText(),stoolComboBox.getSelectedItem().toString() + " " +extraStoolInput.getText(),urineComboBox.getSelectedItem().toString() + " " + extraUrineInput.getText(),perspirationComboBox.getSelectedItem().toString()+" " + extraPerspirationInput.getText(),sleepComboBox.getSelectedItem().toString() + " " +sleepInput.getText(), dreamsComboBox.getSelectedItem().toString() + " " + extraDreamsInput.getText(),thermalInput.getText(),gynacHistoryInput.getText(),mindInput.getText(),temperatureInput.getText(),pulseInput.getText(),bpInput.getText(),respiratoryRateInput.getText(),otherInput.getText(),cvsInput.getText(),rsInput.getText(),cnsInput.getText(),PAInput.getText(), invgInput.getText(),miasmInput.getText(),finalDiagnosisInput.getText(),probableRemediesInput.getText());
         this.dispose();
     }//GEN-LAST:event_saveButtonActionPerformed
