@@ -194,7 +194,7 @@ public class VisitList extends javax.swing.JFrame {
         System.out.println(id);
         pat_id = id;
         
-        String query = "SELECT * from patient_visit_det where patient_id = ?" ;
+        String query = "SELECT * from patient_visit_det where patient_id = ? order by id desc" ;
 
         try {
             Connection con = DriverManager.getConnection(url, user, password);
