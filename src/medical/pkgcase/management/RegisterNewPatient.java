@@ -358,7 +358,7 @@ public class RegisterNewPatient extends javax.swing.JFrame {
     pastMedical=pastMedicalInput.getText();
     occupation=occupationInput.getText();
     
-    //address = address.replaceAll("\\", "-");
+    address = address.replaceAll("\\\\", "-");
 
     if(maleButton.isSelected())
         gender="Male";

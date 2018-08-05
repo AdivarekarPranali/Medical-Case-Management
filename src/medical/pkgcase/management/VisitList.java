@@ -19,14 +19,11 @@ import javax.swing.table.DefaultTableModel;
  */
 class PatientVisits
 {
-    String id, chiefComplain, origin, duration, progress, addiction, appetite, thirst, desire, aversion, stool, urine, perspiration, sleep, dreams, thermally, gynac_history, mind, temp, pulse, blood_pressure, resp_rate, others, cvs, rs, cns, pa, invg_advised, miasm, susceptibility, final_diagnosis, probable_remedies, link;
-    PatientVisits( String i, String cc, String o, String d,String  progress,String  addiction,String  appetite,String  thirst,String  desire,String  aversion,String  stool,String  urine,String  perspiration,String  sleep,String  dreams,String  thermally,String  gynac_history,String  mind,String  temp,String  pulse,String  blood_pressure,String  resp_rate,String  others,String  cvs,String  rs,String  cns,String  pa,String  invg_advised,String  miasm,String  susceptibility,String  final_diagnosis,String  probable_remedies, String l)
+    String id, chiefComplain, addiction, appetite, thirst, desire, aversion, stool, urine, perspiration, sleep, dreams, thermally, gynac_history, mind, temp, pulse, blood_pressure, resp_rate, others, cvs, rs, cns, pa, invg_advised, miasm, final_diagnosis, probable_remedies, link;
+    PatientVisits( String i, String cc,String  addiction,String  appetite,String  thirst,String  desire,String  aversion,String  stool,String  urine,String  perspiration,String  sleep,String  dreams,String  thermally,String  gynac_history,String  mind,String  temp,String  pulse,String  blood_pressure,String  resp_rate,String  others,String  cvs,String  rs,String  cns,String  pa,String  invg_advised,String  miasm,String  final_diagnosis,String  probable_remedies, String l)
     {
         id = i;
-        chiefComplain = cc;
-        origin = o;
-        duration = d;
-        this. progress= progress;	
+        chiefComplain = cc;	
         this. addiction= addiction;	
         this. appetite= appetite;	
         this. thirst= thirst;	
@@ -51,7 +48,6 @@ class PatientVisits
         this. pa= pa;	
         this. invg_advised= invg_advised;	
         this. miasm= miasm;	
-        this. susceptibility= susceptibility;	
         this. final_diagnosis= final_diagnosis;	
         this. probable_remedies= probable_remedies;
 
@@ -66,18 +62,6 @@ class PatientVisits
     public String getChiefComplain()
     {
         return chiefComplain;
-    }
-    public String getOrigin()
-    {
-        return origin;
-    }
-    public String getDuration()
-    {
-        return duration;
-    }
-
-    public String getProgress() {
-        return progress;
     }
 
     public String getAddiction() {
@@ -176,10 +160,6 @@ class PatientVisits
         return miasm;
     }
 
-    public String getSusceptibility() {
-        return susceptibility;
-    }
-
     public String getFinal_diagnosis() {
         return final_diagnosis;
     }
@@ -232,11 +212,7 @@ public class VisitList extends javax.swing.JFrame {
                 System.out.println("in");
 
                 String visitId = rs.getString("id");
-		String chiefComplain = rs.getString("chief_complaint");
-		String origin = rs.getString("origin");                
-		String duration = rs.getString("duration");
-                	
-                String  progress = rs.getString("progress");	
+		String chiefComplain = rs.getString("chief_complaint");	
                 String  addiction = rs.getString("addiction");	
                 String  appetite = rs.getString("appetite");	
                 String  thirst = rs.getString("thirst");	
@@ -260,8 +236,7 @@ public class VisitList extends javax.swing.JFrame {
                 String  cns = rs.getString("cns");	
                 String  pa = rs.getString("pa");	
                 String  invg_advised = rs.getString("invg_advised");	
-                String  miasm = rs.getString("miasm");	
-                String  susceptibility = rs.getString("susceptibility");	
+                String  miasm = rs.getString("miasm");		
                 String  final_diagnosis = rs.getString("final_diagnosis");	
                 String  probable_remedies = rs.getString("probable_remedies");	
                 String link = rs.getString("folder_link");
@@ -269,7 +244,7 @@ public class VisitList extends javax.swing.JFrame {
         
 		//String ph = rs.getString("past_med_history");
 		System.out.println("id : " + id);
-                PatientVisits p = new PatientVisits(visitId, chiefComplain, origin, duration,progress,addiction,appetite,thirst,desire,aversion,stool,urine,perspiration,sleep,dreams,thermally,gynac_history,mind,temp,pulse,blood_pressure,resp_rate,others,cvs,rs_pat,cns,pa,invg_advised,miasm,susceptibility,final_diagnosis,probable_remedies,link);
+                PatientVisits p = new PatientVisits(visitId, chiefComplain, addiction,appetite,thirst,desire,aversion,stool,urine,perspiration,sleep,dreams,thermally,gynac_history,mind,temp,pulse,blood_pressure,resp_rate,others,cvs,rs_pat,cns,pa,invg_advised,miasm,final_diagnosis,probable_remedies,link);
                 patientVisits.add(p);
 
             }
@@ -280,83 +255,75 @@ public class VisitList extends javax.swing.JFrame {
         
         DefaultTableModel model = new DefaultTableModel();            
 
-        Object[] columnsName = new Object[33];
+        Object[] columnsName = new Object[29];
         System.out.println("outer");
         columnsName[0] = "Id"; 
-        columnsName[1] = "Chief Complaint";    
-        columnsName[2] = "Origin";    
-        columnsName[3] = "Duration";       
-        columnsName[4] = "progress";	
-        columnsName[5] = "addiction";	
-        columnsName[6] = "appetite";	
-        columnsName[7] = "thirst";	
-        columnsName[8] = "desire";	
-        columnsName[9] = "aversion";	
-        columnsName[10] = "stool";	
-        columnsName[11] = "urine";	
-        columnsName[12] = "perspiration";	
-        columnsName[13] = "sleep";	
-        columnsName[14] = "dreams";	
-        columnsName[15] = "thermally";	
-        columnsName[16] = "gynac_history";	
-        columnsName[17] = "mind";	
-        columnsName[18] = "temp";	
-        columnsName[19] = "pulse";	
-        columnsName[20] = "blood_pressure";	
-        columnsName[21] = "resp_rate";	
-        columnsName[22] = "others";	
-        columnsName[23] = "cvs";	
-        columnsName[24] = "rs";	
-        columnsName[25] = "cns";	
-        columnsName[26] = "pa";	
-        columnsName[27] = "invg_advised";	
-        columnsName[28] = "miasm";	
-        columnsName[29] = "susceptibility";	
-        columnsName[30] = "final_diagnosis";	
-        columnsName[31] = "probable_remedies"; 
-        columnsName[32] = "Link";
-        
+        columnsName[1] = "Chief Complaint";   
+        columnsName[2] = "addiction";	
+        columnsName[3] = "appetite";	
+        columnsName[4] = "thirst";	
+        columnsName[5] = "desire";	
+        columnsName[6] = "aversion";	
+        columnsName[7] = "stool";	
+        columnsName[8] = "urine";	
+        columnsName[9] = "perspiration";	
+        columnsName[10] = "sleep";	
+        columnsName[11] = "dreams";	
+        columnsName[12] = "thermally";	
+        columnsName[13] = "gynac_history";	
+        columnsName[14] = "mind";	
+        columnsName[15] = "temp";	
+        columnsName[16] = "pulse";	
+        columnsName[17] = "blood_pressure";	
+        columnsName[18] = "resp_rate";	
+        columnsName[19] = "others";	
+        columnsName[20] = "cvs";	
+        columnsName[21] = "rs";	
+        columnsName[22] = "cns";	
+        columnsName[23] = "pa";	
+        columnsName[24] = "invg_advised";	
+        columnsName[25] = "miasm";		
+        columnsName[26] = "final_diagnosis";	
+        columnsName[27] = "probable_remedies"; 
+        columnsName[28] = "Link";
+       
         model.setColumnIdentifiers(columnsName);        
 
         System.out.println("outerp");
-        Object[] rowData = new Object[33];        
+        Object[] rowData = new Object[29];        
 
         for(int i = 0; i < patientVisits.size(); i++)
         {            
             rowData[0] = patientVisits.get(i).getId();
             rowData[1] = patientVisits.get(i).getChiefComplain();
-            rowData[2] = patientVisits.get(i).getOrigin();
-            rowData[3] = patientVisits.get(i).getDuration();
-            rowData[4] = patientVisits.get(i).getProgress();
-            rowData[5] = patientVisits.get(i).getAddiction();
-            rowData[6] = patientVisits.get(i).getAppetite();	
-            rowData[7] = patientVisits.get(i).getThirst();	
-            rowData[8] = patientVisits.get(i).getDesire();	
-            rowData[9] = patientVisits.get(i).getAversion();	
-            rowData[10] = patientVisits.get(i).getStool();	
-            rowData[11] = patientVisits.get(i).getUrine();	
-            rowData[12] = patientVisits.get(i).getPerspiration();	
-            rowData[13] = patientVisits.get(i).getSleep();	
-            rowData[14] = patientVisits.get(i).getDreams();	
-            rowData[15] = patientVisits.get(i).getThermally();	
-            rowData[16] = patientVisits.get(i).getGynac_history();	
-            rowData[17] = patientVisits.get(i).getMind();	
-            rowData[18] = patientVisits.get(i).getTemp();	
-            rowData[19] = patientVisits.get(i).getPulse();	
-            rowData[20] = patientVisits.get(i).getBlood_pressure();	
-            rowData[21] = patientVisits.get(i).getResp_rate();	
-            rowData[22] = patientVisits.get(i).getOthers();	
-            rowData[23] = patientVisits.get(i).getCsv();	
-            rowData[24] = patientVisits.get(i).getRs();	
-            rowData[25] = patientVisits.get(i).getCns();	
-            rowData[26] = patientVisits.get(i).getPa();	
-            rowData[27] = patientVisits.get(i).getInvg_advised();	
-            rowData[28] = patientVisits.get(i).getMiasm();	
-            rowData[29] = patientVisits.get(i).getSusceptibility();	
-            rowData[30] = patientVisits.get(i).getFinal_diagnosis();	
-            rowData[31] = patientVisits.get(i).getProbable_remedies();	
+            rowData[2] = patientVisits.get(i).getAddiction();
+            rowData[3] = patientVisits.get(i).getAppetite();	
+            rowData[4] = patientVisits.get(i).getThirst();	
+            rowData[5] = patientVisits.get(i).getDesire();	
+            rowData[6] = patientVisits.get(i).getAversion();	
+            rowData[7] = patientVisits.get(i).getStool();	
+            rowData[8] = patientVisits.get(i).getUrine();	
+            rowData[9] = patientVisits.get(i).getPerspiration();	
+            rowData[10] = patientVisits.get(i).getSleep();	
+            rowData[11] = patientVisits.get(i).getDreams();	
+            rowData[12] = patientVisits.get(i).getThermally();	
+            rowData[13] = patientVisits.get(i).getGynac_history();	
+            rowData[14] = patientVisits.get(i).getMind();	
+            rowData[15] = patientVisits.get(i).getTemp();	
+            rowData[16] = patientVisits.get(i).getPulse();	
+            rowData[17] = patientVisits.get(i).getBlood_pressure();	
+            rowData[18] = patientVisits.get(i).getResp_rate();	
+            rowData[19] = patientVisits.get(i).getOthers();	
+            rowData[20] = patientVisits.get(i).getCsv();	
+            rowData[21] = patientVisits.get(i).getRs();	
+            rowData[22] = patientVisits.get(i).getCns();	
+            rowData[23] = patientVisits.get(i).getPa();	
+            rowData[24] = patientVisits.get(i).getInvg_advised();	
+            rowData[25] = patientVisits.get(i).getMiasm();		
+            rowData[26] = patientVisits.get(i).getFinal_diagnosis();	
+            rowData[27] = patientVisits.get(i).getProbable_remedies();	
 
-            rowData[32] = patientVisits.get(i).getLink();
+            rowData[28] = patientVisits.get(i).getLink();
             
             model.addRow(rowData);
         }
@@ -456,7 +423,7 @@ public class VisitList extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row = visitTable.getSelectedRow();
         int col = visitTable.getSelectedColumn();
-        if(col == 32)
+        if(col == 29)
         {
             Object o = (Object) visitTable.getValueAt(row,col);
             String path = String.valueOf(o);
