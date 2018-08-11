@@ -5,6 +5,7 @@
  */
 package medical.pkgcase.management;
 
+import com.sun.glass.ui.Cursor;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -438,9 +439,9 @@ public class VisitList extends javax.swing.JFrame {
 
     private void registerNewComplaintButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerNewComplaintButtonActionPerformed
         // TODO add your handling code here:
-        
-        Visits v = new Visits(pat_id);
-        this.dispose();
+        VisitDialog vd = new VisitDialog(this,false,pat_id);
+        //Visits v = new Visits(pat_id);
+        //this.dispose();
     }//GEN-LAST:event_registerNewComplaintButtonActionPerformed
 
     /**
@@ -473,7 +474,8 @@ public class VisitList extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new VisitList().setVisible(true);
+                new VisitList("1","n","ph").setVisible(true);
+                //new VisitList("1"."n","ph").setVisible(true);
             }
         });
     }

@@ -24,7 +24,7 @@ public class InsertVisitDetail
         String user = "vjtidev";
         String password = "vjti@123";
         
-        String query = "INSERT INTO patient_visit_det (patient_id, chief_complaint,  addiction, appetite, thirst, desire, aversion, stool, urine, perspiration, sleep, dreams, thermally, gynac_history, mind, temp, pulse, blood_pressure, resp_rate, others, cvs, rs, cns, pa, invg_advised, miasm, final_diagnosis, probable_remedies ) VALUES (?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?,	?)" ;
+        String query = "INSERT INTO patient_visit_det (patient_id, chief_complaint,  addiction, appetite, thirst, desire, aversion, stool, urine, perspiration, sleep, dreams, thermally, gynac_history, mind, temp, pulse, blood_pressure, resp_rate, others, cvs, rs, cns, pa, invg_advised, miasm, final_diagnosis, probable_remedies ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" ;
 
         try {
             Connection con = DriverManager.getConnection(url, user, password);
